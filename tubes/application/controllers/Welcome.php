@@ -26,4 +26,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('buat_laporan');
 	}
+	public function base_url()
+	{
+		$this->load->helper('url');
+	}
 }

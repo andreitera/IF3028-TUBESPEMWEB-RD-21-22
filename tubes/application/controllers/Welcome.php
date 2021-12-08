@@ -18,9 +18,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('M_lapor');
+	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data = $this->M_lapor->getLapor();
+		$record = array('data_lapor' => $data);
+		$this->load->view('welcome_message', $record);
 	}
 	public function buat_laporan()
 	{
@@ -30,4 +37,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url');
 	}
+
+
 }

@@ -1,0 +1,54 @@
+*{
+	font-family: sans-serif;
+	color: #444444;
+}
+body{
+	background-color: grey;
+}
+.container{
+	margin-top: 100px;
+	margin-left: 150px;
+	padding: 20px;
+	background-color: white;
+	margin-right: 150px;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+.content{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+.header{
+	text-align: center;
+}
+.boxlapor{
+	padding-bottom: 156px;
+	padding-right: 77%;
+}
+.boxaspek{
+	padding: 5px;
+}
+.buttonsubmit{
+	padding: 10px;
+	background-color: white;
+	float: right;
+	border: 1px solid grey;
+}
+.isi{
+	text-align: justify;
+}
+.boxcari{
+	padding: 17px;
+	width: 85%;
+}
+.btncari{
+	padding: 17px;
+	width: 10%;
+	background-color: white;
+}
+.buat-lapor{
+	text-decoration: none;
+	text-align: center;
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="stylee.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -16,7 +16,7 @@
 					<input class="btncari"type="submit" value="Cari" /> 
 				</form> <br>
 				<p align="center">
-					<a href="" class="buat-lapor">Buat Laporan/Komentar +</a>
+					<a href="<?php echo base_url('Welcome/buat_laporan') ?>" class="buat-lapor">Buat Laporan/Komentar +</a>
 				</p>
 				<p>Laporan/Komentar Terakhir</p>
 				<hr>

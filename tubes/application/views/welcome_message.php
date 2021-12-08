@@ -20,6 +20,16 @@
 				</p>
 				<p>Laporan/Komentar Terakhir</p>
 				<hr>
+				<?php
+					foreach ($data_lapor as $d) {
+						echo $d->isi;
+
+				?>
+				<p>Waktu: <?php echo $d->waktu ?></p>
+				<hr>
+				<?php
+					}
+				?>
 			</div>
 		</fieldset>
 	</div>

@@ -14,7 +14,11 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $items = Laporan::all();
+
+        return view('index', [
+            "items" => $items
+        ]);
     }
 
     /**
@@ -24,7 +28,7 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -80,9 +84,11 @@ class LaporanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showLaporan($id)
     {
-        //
+        $result = Laporan::findOrFail($id);
+
+        return view('laporan', ["item" => $result]);
     }
 
     /**

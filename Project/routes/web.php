@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LaporanController::class, 'index'])->name('laporan.request.index');
+Route::get('/{id}', [LaporanController::class, 'showLaporan'])->name('laporan.request.show');
 Route::post('/api/store', [LaporanController::class, 'store'])->name('laporan.request.store');

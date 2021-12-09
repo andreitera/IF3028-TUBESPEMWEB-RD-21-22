@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -13,7 +14,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +35,43 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $isValid = $request->validate([
+                'judul' => 'required',
+                'isiLaporan' => 'required',
+                'lokasiKejadian' => 'required',
+                'instansiTujuan' => 'required',
+                'kategoriLaporan' => 'required',
+                'tanggalKejadian' => 'required',
+            ]);
+
+        if($isValid) {
+            $res = $request->all();
+            $input = [
+                'judul' => $res['judul'],
+                'isiLaporan' => $res['isiLaporan'],
+                'lokasiKejadian' => $res['lokasiKejadian'],
+                'instansiTujuan' => $res['instansiTujuan'],
+                'kategoriLaporan' => $res['kategoriLaporan'],
+                'tanggalKejadian' => $res['tanggalKejadian']
+            ];
+
+            try {
+                $saved = Laporan::create($input);
+            } catch (\Illuminate\Database\QueryException $exception) {
+                $errorInfo = $exception->errorInfo;
+                return response($errorInfo);
+            }
+            
+
+            return response()->json([
+                'success' => 'data saved!',
+                'data' => $saved
+            ]);
+        }
+
+        return response()->json([
+            'error' => 'Cannot saved data'
+        ]);
     }
 
     /**

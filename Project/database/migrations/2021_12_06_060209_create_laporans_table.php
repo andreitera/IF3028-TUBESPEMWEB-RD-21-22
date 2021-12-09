@@ -14,13 +14,13 @@ class CreateLaporansTable extends Migration
     public function up()
     {
         Schema::create('laporans', function (Blueprint $table) {
-            $table->id();
-            $table->string('Judul')->nullable(false);
-            $table->string('Isi-Laporan')->nullable(false);
-            $table->string('Lokasi-Kejadian')->nullable(false);
-            $table->string('Instansi-Tujuan')->nullable(false);
-            $table->string('Kategori-Laporan')->nullable(false);
-            $table->date('Tanggal-Kejadian')->nullable(false);
+            $table->id()->autoIncrement();
+            $table->string('judul')->nullable(false)->default("");
+            $table->string('isiLaporan')->nullable(false)->default("");
+            $table->string('lokasiKejadian')->nullable(false)->default("");
+            $table->string('instansiTujuan')->nullable(false)->default("");
+            $table->string('kategoriLaporan')->nullable(false)->default("");
+            $table->string('tanggalKejadian')->nullable(false)->default("");
             $table->timestamps();
         });
     }

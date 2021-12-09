@@ -10,11 +10,11 @@ class Laporan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'Judul', 
-        'Isi-Laporan', 
-        'Lokasi-Kejadian', 
-        'Instansi-Tujuan', 
-        'Kategori-Laporan', 
-        'Tanggal Kejadian'
+        'judul', 
+        'isiLaporan', 
+        'lokasiKejadian', 
+        'instansiTujuan', 
+        'kategoriLaporan', 
+        'tanggalKejadian'
     ];
 }

@@ -14,9 +14,8 @@
                 <h1>SIMPLE LAPOR!</h1>
             </div>
             <div class="search_bar">
-                <div class="search_btn">
-                    Cari
-                </div>
+                <input type="text" name="search" class="search" placeholder="Cari Laporan">
+                <button type="submit" class="search_btn"> Cari </button>
             </div>
             <div class="buat_lapor">
                 <a href="">Buat Laporan/Komentar</a>

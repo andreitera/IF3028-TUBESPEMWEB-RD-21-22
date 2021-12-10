@@ -13,9 +13,9 @@
 				</div>
 				<p>Detail Laporan/Komentar	</p>
 				<hr>
-				<form>
-					<input class="boxlapor" type="text" name="isi" placeholder="Laporan/Komentar"></input><br><br>	
-					<select id="aspek" name="aspek" class="boxaspek">
+				<form action="<?php echo base_url('Welcome/aksi_insert')?>" method="post">
+					<input class="boxlapor" type="text" name="isi" placeholder="Laporan/Komentar" require></input><br><br>	
+					<select id="aspek" name="aspek" class="boxaspek" require>
 						<option >Pilih Aspek Pelaporan/Komentar</option>
 						<option value="infrastruktur">Infrastrukur</option>
 						<option value="dosen">Dosen</option>

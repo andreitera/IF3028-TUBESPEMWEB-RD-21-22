@@ -3,6 +3,9 @@
 <head>
 	<title>HOME</title>
 	<link rel="stylesheet" type="text/css" href="../css/style_tampilan.css">
+    <script>
+        console.log("hello world");
+    </script>
 
 </head>
 <body>

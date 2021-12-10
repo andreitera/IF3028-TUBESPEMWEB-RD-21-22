@@ -41,14 +41,21 @@ body{
 }
 .boxcari{
 	padding: 17px;
-	width: 85%;
+	width: 80%;
 }
 .btncari{
 	padding: 17px;
 	width: 10%;
+	float: right;
 	background-color: white;
 }
 .buat-lapor{
 	text-decoration: none;
 	text-align: center;
+}
+.opsional{
+	float: right;
+}
+a{
+	text-decoration: none;
 }

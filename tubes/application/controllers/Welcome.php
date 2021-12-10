@@ -37,6 +37,21 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url');
 	}
-
+	public function detail_laporan()
+	{
+		$this->load->view('detail_laporan');
+	}
+	public function aksi_insert(){
+		$isi = $this->input->post('isi');
+		$file = $this->input->post('file');
+		$aspek = $this->input->post('aspek');
+		$data_insert= array(
+			'isi' => $isi,
+			'file' => $file,
+			'aspek' => $aspek,
+		);
+		$this->M_lapor->insert_data($data_insert);
+		redirect (base_url('Welcome'));
+	}
 
 }

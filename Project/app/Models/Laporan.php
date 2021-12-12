@@ -12,9 +12,6 @@ class Laporan extends Model
     protected $fillable = [
         'judul', 
         'isiLaporan', 
-        'lokasiKejadian', 
-        'instansiTujuan', 
-        'kategoriLaporan', 
-        'tanggalKejadian'
+        'kategoriLaporan',
     ];
 }

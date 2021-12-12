@@ -18,6 +18,7 @@ class CreateLaporansTable extends Migration
             $table->string('judul')->nullable(false)->default("");
             $table->string('isiLaporan')->nullable(false)->default("");
             $table->string('kategoriLaporan')->nullable(false)->default("");
+            $table->string('file')->nullable(true);
             $table->timestamps();
         });
     }

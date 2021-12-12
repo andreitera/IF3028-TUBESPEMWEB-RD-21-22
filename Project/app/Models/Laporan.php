@@ -13,5 +13,6 @@ class Laporan extends Model
         'judul', 
         'isiLaporan', 
         'kategoriLaporan',
+        'file'
     ];
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Laporan;
 use Illuminate\Http\Client\ResponseSequence;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class LaporanController extends Controller
 {
@@ -40,18 +41,24 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
+        // return response($request);
         $isValid = $request->validate([
                 'judul' => 'required',
                 'isiLaporan' => 'required',
                 'kategoriLaporan' => 'required',
+                'fileUpload' => 'required|mimes:jpeg,bmp,png,docs,docsx,pdf'
             ]);
-
+        
         if($isValid) {
+            $path = $request->file('fileUpload')->store('files');
+
+
             $res = $request->all();
             $input = [
                 'judul' => $res['judul'],
                 'isiLaporan' => $res['isiLaporan'],
                 'kategoriLaporan' => $res['kategoriLaporan'],
+                'file' => $path
             ];
 
             try {
@@ -103,6 +110,8 @@ class LaporanController extends Controller
             ]);
         }
         
+        Storage::delete($laporan->file);
+
         $laporan->delete();
 
         return response()->json([
@@ -119,11 +128,13 @@ class LaporanController extends Controller
     }
 
     public function updateLaporan(Request $request) {
+        // return response($request->all());
         $data = $request->validate([
             'id' => 'required',
             'judul' => 'required',
             'isiLaporan' => 'required',
             'kategoriLaporan' => 'required',
+            'fileUpload' => 'required|mimes:jpeg,bmp,png,docs,docsx,pdf'
         ]);
 
 
@@ -131,7 +142,11 @@ class LaporanController extends Controller
         $laporan->judul = $data['judul'];
         $laporan->isiLaporan = $data['isiLaporan'];
         $laporan->kategoriLaporan = $data['isiLaporan'];
-
+        
+        $path = $request->file('fileUpload')->store('files');
+        Storage::delete($laporan->file);
+        $laporan->file = $path;
+        
         $laporan->save();
 
         return response()->json([

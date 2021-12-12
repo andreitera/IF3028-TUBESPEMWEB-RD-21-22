@@ -14,7 +14,7 @@
         @foreach ($items as $item)
             <h3>{{$item["judul"]}}</h3>
             <p>{{$item["isiLaporan"]}}</p>
-            {{-- LAMPIRAN --}}
+            <a href="{{asset('storage/'.$item['file'])}}" download> {{class_basename($item['file'])}} </a>
             <span><p>Waktu: {{$item["created_at"]}}</p></span>
             <button class="delete-btn" data-id="{{$item["id"]}}">delete</button>
             <a href="/edit/{{$item["id"]}}">Ubah Laporan</a>
@@ -44,7 +44,6 @@
                             console.log(res.error);
                         }
                     }
-
                 })
             }
         })

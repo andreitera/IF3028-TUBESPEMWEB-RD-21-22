@@ -18,7 +18,7 @@
                 <button type="submit" class="search_btn"> Cari </button>
             </div>
             <div class="buat_lapor">
-                <a href="">Buat Laporan/Komentar</a>
+                <a href="/buat">Buat Laporan/Komentar</a>
             </div>
         </div>
         <div class="container-laporan">
@@ -45,7 +45,7 @@
                         Waktu: 01-02-2021
                     </div>
                     <div class="lihat-selengkapnya">
-                        <a href="">Lihat Selengkapnya &rarr; </a>
+                        <a href="/detail">Lihat Selengkapnya &rarr; </a>
                     </div>
                 </div>
                 <hr>

@@ -23,3 +23,7 @@ Route::get('/home', function () {
 Route::get('/buat', function () {
     return view('Buat');
 });
+
+Route::get('/detail', function () {
+    return view('detail');
+});

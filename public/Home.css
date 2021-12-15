@@ -18,6 +18,24 @@ div.title{
 div.search_bar {
     text-align: center;
 }
+.buat_lapor a:after{
+    content:"\2795";
+    padding: 2px;
+    font-size: 8pt;
+    font-weight:600;
+    color: white;
+    background-color: black;
+}
+.buat_lapor a{
+    color: black;
+    padding:2px;
+}
+.buat_lapor a:link{
+    text-decoration: none;
+}
+.buat_lapor a:visited{
+    text-decoration: none;
+}
 .search{
     padding: 20px;
     border: 1px solid black;
@@ -65,4 +83,14 @@ div.lihat-selengkapnya{
     width: 18%;
     float:right;
     text-align: right;
+}
+.lihat-selengkapnya a{
+    color: black;
+    padding:2px;
+}
+.lihat-selengkapnya a:link{
+    text-decoration: none;
+}
+.lihat-selengkapnya a:visited{
+    text-decoration: none;
 }

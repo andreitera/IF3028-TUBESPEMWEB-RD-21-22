@@ -18,7 +18,7 @@
                 <button type="submit" class="search_btn"> Cari </button>
             </div>
             <div class="buat_lapor">
-                <a href="/buat">Buat Laporan/Komentar</a>
+                <a href="/buat">Buat Laporan/Komentar   </a>
             </div>
         </div>
         <div class="container-laporan">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::get('/home/create', function () {
     return view('createLapor');
 });
 
+Route::resource('laporan', LaporanController::class);

@@ -37,9 +37,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url');
 	}
-	public function detail_laporan()
+	
+	public function detail_laporan($id)
 	{
-		$this->load->view('detail_laporan');
+		$data_id = $this->M_lapor->information($id);
+		$DATA = array('isi_laporan' => $data_id[0]);
+		$this->load->view('detail_laporan',$DATA); 
 	}
 	public function aksi_insert(){
 		$isi = $this->input->post('isi');
@@ -52,6 +55,34 @@ class Welcome extends CI_Controller {
 		);
 		$this->M_lapor->insert_data($data_insert);
 		redirect (base_url('Welcome'));
+	}
+	
+	public function edit_laporan($id){
+		$data_lapor = $this->M_lapor->get_lapor($id);
+		echo "<pre>";
+		print_r($data_lapor);
+		echo "</pre>";
+		$data = array('data_lapor' => $data_lapor);
+		$this->load->view('edit_laporan', $data);
+	}
+
+	public function aksi_edit(){
+		$id = $this->input->post('id');
+		$isi = $this->input->post('isi');
+		$file = $this->input->post('file');
+		$aspek = $this->input->post('aspek');
+		$data_edit= array(
+			'isi' => $isi,
+			'file' => $file,
+			'aspek' => $aspek,
+		);
+		$this->M_lapor->edit_data($data_edit, $id);
+		redirect (base_url('Welcome/detail_laporan/'.$id));
+	}
+
+	public function aksi_delete($id){
+		$this->M_lapor->delete_data($id);
+		redirect(base_url());
 	}
 
 }

@@ -59,9 +59,6 @@ class Welcome extends CI_Controller {
 	
 	public function edit_laporan($id){
 		$data_lapor = $this->M_lapor->get_lapor($id);
-		echo "<pre>";
-		print_r($data_lapor);
-		echo "</pre>";
 		$data = array('data_lapor' => $data_lapor);
 		$this->load->view('edit_laporan', $data);
 	}

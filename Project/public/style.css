@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+html {
+    height: 80%;
+    width: 100%;
+}
+
+#judul-container {
+    width: 80%;
+    padding: 8px 7px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid grey;
+
+}
+
+.no-outline:focus {
+    outline: none;
+  }
+
+.no-border {
+    border-style: hidden;
+}
+
+#isi-laporan-container {
+    border-color: grey;
+}
+
+.form-container {
+    height: 100%;
+    width: 68.8%;
+    display: flex;
+    align-items:stretch;
+    flex-direction: column;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding-left: 4em;
+}

@@ -22,12 +22,13 @@
 				<hr>
 				<?php
 					foreach ($data_lapor as $d) {
+						echo "<br><div class='isi-lapor'>";
 						echo $d->isi;
-						
+						echo "</div>";
 				?>
 				<div><br>Lampiran: <?php echo $d->file; ?>
 					<div class="opsional">Waktu: <?php echo $d->waktu; ?> 
-					<a  href="<?php echo base_url('Welcome/detail_laporan')?>"> &emsp;Lihat Selengkapnya></a>
+					<a  href="<?php echo base_url('Welcome/detail_laporan/'.$d->id) ?>"> &emsp;Lihat Selengkapnya></a>
 					</div>
 					<br>
 					<hr>

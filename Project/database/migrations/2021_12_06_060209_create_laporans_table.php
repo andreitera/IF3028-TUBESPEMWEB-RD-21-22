@@ -17,10 +17,8 @@ class CreateLaporansTable extends Migration
             $table->id()->autoIncrement();
             $table->string('judul')->nullable(false)->default("");
             $table->string('isiLaporan')->nullable(false)->default("");
-            $table->string('lokasiKejadian')->nullable(false)->default("");
-            $table->string('instansiTujuan')->nullable(false)->default("");
             $table->string('kategoriLaporan')->nullable(false)->default("");
-            $table->string('tanggalKejadian')->nullable(false)->default("");
+            $table->string('file')->nullable(true);
             $table->timestamps();
         });
     }

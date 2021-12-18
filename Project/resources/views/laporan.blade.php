@@ -8,7 +8,8 @@
     <title>Hello World</title>
 </head>
 <body>
-    {{$item["judul"]}}
-    {{$item["isiLaporam"]}}
+    <h1>{{$item["judul"]}}</h1>
+    <p>{{$item["isiLaporan"]}}</p>
+    
 </body>
 </html>

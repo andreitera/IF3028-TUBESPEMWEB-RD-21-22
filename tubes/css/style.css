@@ -24,8 +24,9 @@ body{
 	text-align: center;
 }
 .boxlapor{
-	padding-bottom: 156px;
-	padding-right: 77%;
+	height: 300px;
+	width: 100%;
+	word-wrap: break-word;
 }
 .boxaspek{
 	padding: 5px;
@@ -38,6 +39,9 @@ body{
 }
 .isi{
 	text-align: justify;
+}
+.isi-lapor{
+	word-break: break-all;
 }
 .boxcari{
 	padding: 17px;
@@ -58,4 +62,11 @@ body{
 }
 a{
 	text-decoration: none;
+}
+.edit{
+	position: absolute;
+	right: 530px;
+}
+.hapus{
+	float: right;
 }

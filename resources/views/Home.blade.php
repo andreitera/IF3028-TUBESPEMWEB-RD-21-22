@@ -1,13 +1,17 @@
+@extends ('layout/main')
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @section ('head')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Home.css">
     <title>Lapor</title>
+    @endsection
 </head>
 <body>
+    @section ('container')
     <div class="container">
         <div class="header">
             <div class="title">
@@ -29,6 +33,7 @@
                 <hr> 
             </div>
             <div class="cuplikan-laporan">
+                @foreach($data as $item)
                 <div class="paragraph">
                     <p>
                         I inadvertently went to See's Candy last week (I was in the mall looking for phone repair), and as it turns out, See's Candy now charges a dollar -- a full dollar -- for even the simplest of their wee confection offerings. I bought two chocolate lollipops and two chocolate-caramel-almond things. The total cost was four-something. I mean, the candies were tasty and all, but let's be real: A Snickers bar is fifty cents. After this dollar-per-candy revelation, I may not find myself wandering dreamily back into a See's Candy any time soon.
@@ -49,8 +54,10 @@
                     </div>
                 </div>
                 <hr>
+                @endforeach
             </div>
         </div>
     </div>
+    @endsection
 </body>
 </html>

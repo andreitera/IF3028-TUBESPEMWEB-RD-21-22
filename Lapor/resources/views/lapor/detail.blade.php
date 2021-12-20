@@ -17,21 +17,23 @@
             <p class="isi-detail"> {{$lapor->isi}}</p>
 
             <h4>Lampiran:</h4>
-            <?php
+
+            {{-- <?php
             $allowed = ['jpg', 'png', 'jpeg'];
-            $ext = explode(".", $lapor['lampiran']);
+            $ext = explode(".", $lapor->lampiran);
             $extFile = strtolower(end($ext));
-            ?>
+            ?> --}}
 
-            <?php if (in_array($extFile, $allowed)) : ?>
+
+            {{-- {{-- <?php if (in_array($extFile, $allowed)) : ?> --}}
                 {{-- <img id="lampiran-detail" src="/img/<?= $lapor['lampiran']; ?>"> --}}
-                <img id="lampiran-detail" src="/img/{{$lapor->lampiran}}">
-            <?php endif; ?>
+                <img id="lampiran-detail" src="{{asset($lapor->lampiran)}}">
+            {{-- {{-- <?php endif; ?> --}}
 
-            <?php if (!in_array($extFile, $allowed)) : ?>
-                {{-- <a href="/img/<?= $lapor['lampiran']; ?>"> <?= $lapor['lampiran']; ?></a> --}}
+            {{-- <?php if (!in_array($extFile, $allowed)) : ?>
+                <a href="/img/<?= $lapor['lampiran']; ?>"> <?= $lapor['lampiran']; ?></a>
                 <a href="/img/{{$lapor->lampiran}}"> {{$lapor->lampiran}} </a>
-            <?php endif; ?>
+            <?php endif; ?> --}}
 
             <div class="wrap">
                 <div class="konten">

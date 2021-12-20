@@ -36,7 +36,7 @@ class laporController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, \App\Models\Lapor $lapor)
     {
         //
         $request->validate([
@@ -46,9 +46,19 @@ class laporController extends Controller
             'lampiran' => 'required'
         ]);
 
-        lapor::create($request->all());
+        $req = $request->all();
+        if (
+            $request->hasfile('lampiran') and $request->file('lampiran')
+            ->isValid()
+        ) {
+            $path = $request->file('lampiran')->move('img', time() . '.' . $request->file('lampiran')->extension());
+            $req['lampiran'] = $path;
+        }
+        lapor::create($req);
         return redirect('/')->with('status', 'selamat! data telah habis ditambahkan');
+
     }
+
 
     /**
      * Display the specified resource.
@@ -96,14 +106,15 @@ class laporController extends Controller
                 'nama' => $request->nama,
                 'isi' => $request->isi,
                 'aspek' => $request->aspek,
-                'lampiran' => $request->lampiran
+               // 'lampiran' => $request->lampiran
             ]);
 
-        // if ($request->hasFile('logo')) {
-        //     $dataHimpunan->update([
-        //         'logo' => url($request->file('logo')->move('Himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
-        //     ]);
-        // }
+         if ($request->hasFile('lampiran')) {
+            $lapor->update([
+
+            'lampiran' => $request->file('lampiran')->move('img', time() . '.' . $request->file('lampiran')->extension()),
+             ]);
+         }
 
         return redirect('/')->with('status', 'Selamat! Data telah berhasil diubah.');
     }

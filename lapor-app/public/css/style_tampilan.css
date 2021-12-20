@@ -53,3 +53,17 @@ input {
 button {
   height: 36px;
 }
+
+.keterangan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keterangan-kanan {
+  align-items: center;
+  display: flex;
+}
+
+.keterangan p {
+  margin-right: 20px;
+}

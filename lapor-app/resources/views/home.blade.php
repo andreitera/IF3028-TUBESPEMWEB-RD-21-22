@@ -37,32 +37,22 @@
 		@foreach($list_laporan as $key=>$lapor)
 		<div class="card">
 			<p>{{ $lapor-> isi}}</p>
-			<div class="keterangan">
-				<p>Lampiran: {{ $lapor-> lampir }}</p>
-				<div class="keterangan-kanan">
-					<p>waktu : {{ $lapor-> waktu }}</p>
-					<a href="">Lihat Selengkapnya <b>></b></a>
-				</div>
+			<p><img src="img/file.png" width="20px" height="20px"></p>
+			<div style="margin-top: -40px; margin-bottom: 17px; margin-left: 25px; width: 290px;">
+				Lampiran: {{ $lapor-> lampiran }}
 			</div>
-		</div>
+			<p style='width: auto; height: auto; margin-top:-35.9px; margin-left: 325px;'>Waktu: {{ $lapor-> waktu }}</p>
+			
+			<p style="margin-top: -33.7px; margin-left: 535px;">
+				<a href=" {{ url('home/'.$lapor->id) }} ">Lihat Selengkapnya
+			</p>
+			<div style="margin-top: -34px; margin-left: 678px;">
+						<img src="img/next-button.png" width="20px" height="20px">
+					</a>	
+			</div>
 		<hr>
 		@endforeach
-		<p><img src="img/file.png" width="20px" height="20px"></p>
-		<div style="margin-top: -40px; margin-bottom: 17px; margin-left: 25px; width: 290px;">
-			Lampiran: 
-		</div>
-		<p style='width: auto; height: auto; margin-top:-35.9px; margin-left: 325px;'>Waktu:</p>
 		
-		<p style="margin-top: -33.7px; margin-left: 535px;">
-			<a href="">Lihat Selengkapnya
-		</p>
-		<div style="margin-top: -34px; margin-left: 678px;">
-					<img src="img/next-button.png" width="20px" height="20px">
-				</a>	
-		</div>
-		<hr>
-		
-		</div>
 
 		<br><br>
 	</div>

@@ -63,3 +63,11 @@ button {
 .edit {
   margin-left: 300px;
 }
+
+.kiri {
+  display: flex;
+}
+
+.kiri p {
+  margin-right: 10px;
+}

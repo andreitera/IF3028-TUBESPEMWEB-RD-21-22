@@ -16,14 +16,19 @@
 		<hr>
 		<br>
 			<p>
+			{{ $model -> isi}}
 			</p>
-			<p>Lampiran: </p>
+			<p>Lampiran: {{ $model -> lampiran }}  </p>
 			<div>
 				<a href="">
 				<img src="/img/edit-file.png" width="25px" height="25px" style="margin-bottom: -43px; margin-left: 410px;"> 
 				</a>
 			</div>
-			<p>Waktu:  </p>
+			<div class="kiri">
+				<p>Waktu: {{ $model -> waktu }} </p>
+				<p>Aspek : {{ $model -> aspek }} </p>
+			</div>
+			
 			<div style="margin-top: -42px; margin-left: 440px;">
 			<button style="background-color: rgba(255, 255, 255, 0.205); border-radius: 10px; ">
 			<a href="" style="color: black;">Edit</a>

@@ -49,7 +49,10 @@ class LaporanController extends Controller
      */
     public function show($id)
     {
-        //
+        $model = Laporan::find($id);
+        return view('detail', compact(
+            'model'
+        ));
     }
 
     /**

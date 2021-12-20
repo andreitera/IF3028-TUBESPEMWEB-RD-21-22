@@ -14,16 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/home/detail', function () {
-    return view('detail');
-});
-
-Route::get('/home/create', function () {
-    return view('createLapor');
-});
-
-Route::resource('laporan', LaporanController::class);
+Route::resource('home', LaporanController::class);

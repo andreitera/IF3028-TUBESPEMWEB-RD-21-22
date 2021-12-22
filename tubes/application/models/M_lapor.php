@@ -2,12 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_lapor extends CI_Model {
-	public function getLapor(){
-		$this->db->select('*');
-		$this->db->from('lapor');
-		$this->db->order_by('id', 'desc');
-		$query = $this->db->get();
-		return $query->result();
+	function data($number,$offset){
+		return $query = $this->db->get('lapor',$number,$offset)->result();		
 	}
 	public function insert_data($data){
 		$this->db->insert('lapor', $data);
@@ -33,5 +29,21 @@ class M_lapor extends CI_Model {
 		$this->db->delete('lapor');
 	}
 
+	
+
+	function jumlah_data(){
+		return $this->db->get('lapor')->num_rows();
+	}
+
+
+	public function cari_keyword($keyword){
+			$this->db->select('*');
+			$this->db->from('lapor');
+			$this->db->like('isi',$keyword);
+			$this->db->or_like('aspek',$keyword);
+			$this->db->or_like('file',$keyword);
+			return $this->db->get()->result();
+		}
+		
 }
 ?>

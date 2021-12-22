@@ -27,7 +27,10 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        //
+        $model = new Laporan;
+        return view('createLapor', compact(
+            'model'
+        ));
     }
 
     /**
@@ -38,7 +41,14 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new Laporan;
+        $model -> isi = $request -> isi;
+        $model-> aspek = $request -> aspek;
+        $model -> lampiran = $request -> lampiran;
+        $model -> waktu = $request -> waktu;
+        $model -> save();
+
+        return redirect('home');
     }
 
     /**
@@ -63,7 +73,7 @@ class LaporanController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**

@@ -17,7 +17,8 @@
             <br>
             <p>Buat Laporan/Komentar</p>
             <hr>
-            <form method="post" action="/home">
+            <form method="POST" action="{{ url('home') }}">
+                
                 <textarea name="textarea" placeholder="Laporan/Komentar"></textarea>
                 <br><br>
                 
@@ -28,13 +29,14 @@
                 <br><br><br>
                     <div class="detail">
                         <button type="submit" style="background-color: rgb(252, 250, 249); margin-top: -2px; margin-right: 10px; border-radius: 10px; ">
-                        <a href="" onclick="return confirm('Anda yakin ingin men-submit laporan ini?');" style="color: rgb(7, 7, 7); ">
+                        <a href="{{ url('home') }}" onclick="return confirm('Anda yakin ingin men-submit laporan ini?');" style="color: rgb(7, 7, 7); ">
                         Buat Laporan
                         </a>
                         </button>
                     </div>
             </form>
             <br><hr><br><br>
+
         </div>
 	</div>
 </body>

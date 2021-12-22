@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>HOME</title>
-	<link rel="stylesheet" type="text/css" href="css/style_tampilan.css">
+	<link rel="stylesheet" type="text/css" href="/css/style_tampilan.css">
 
 </head>
 <body>
@@ -12,7 +12,7 @@
 			<strong>SIMPLE LAPOR!</strong>	
 			<br><br><br>
 		</div>
-		<form action="" method="POST">	
+		<form action="" method="">	
 			<center>
 				<input type="text" name="cari">
 				<button type="submit" name="btncari" style="width: 10%; ">Cari</button>
@@ -20,7 +20,7 @@
 		</form>
 		<br>
 		<center>
-			<a href="">Buat Laporan/Komentar 
+			<a href="{{ url('home/createLapor') }}">Buat Laporan/Komentar 
 			<div style="margin-top: -18px; margin-left: 195px;">
 				<a>
 

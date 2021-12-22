@@ -8,12 +8,8 @@
     <form action="/{{$lapor->id}}" method="post" enctype="multipart/form-data">
         @method('patch')
         @csrf
-        {{-- <input type="hidden" name="lampiranLama" value="<?= $lapor['lampiran']; ?>"> --}}
-        {{-- <input type="hidden" name="lampiranLama" value="{{$lapor->lampiran}}"> --}}
-
 
         <div class="input-nama">
-            {{-- <input type="text" id="nama" name="nama" placeholder="nama anda.." value="<?= (old('nama')) ? old('nama') : $lapor['nama'] ?>"> --}}
             <input type="text" id="nama" name="nama" placeholder="nama anda.." value="{{$lapor->nama}}" class="form-control @error('nama') is-invalid @enderror">
 
             @error('nama')
@@ -22,7 +18,6 @@
         </div>
 
         <div>
-            {{-- <textarea id="isi" name="isi" rows="3"><?= (old('isi')) ? old('isi') : $lapor['isi'] ?></textarea> --}}
             <textarea id="isi" name="isi" rows="3" class="form-control @error('isi') is-invalid @enderror" >  {{$lapor->isi}}</textarea>
 
             @error('isi')
@@ -32,7 +27,7 @@
 
         <div class="pilihAspek">
             <select id="aspek" name="aspek" class="form-control @error('aspek') is-invalid @enderror">
-                {{-- <option selected hidden><?= $lapor['aspek']; ?></option> --}}
+
                 <option selected hidden> {{$lapor->aspek}}</option>
                 <option>Dosen</option>
                 <option>Staff</option>

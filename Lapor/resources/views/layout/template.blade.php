@@ -19,20 +19,20 @@
 </body>
 
 <script>
-    // function countWords(str) {
-    //     str = str.replace(/(^\s*)|(\s*$)/gi, "");
-    //     str = str.replace(/[ ]{2,}/gi, " ");
-    //     str = str.replace(/\n /, "\n");
-    //     return str.split(' ').length;
-    // }
+    function countWords(str) {
+        str = str.replace(/(^\s*)|(\s*$)/gi, "");
+        str = str.replace(/[ ]{2,}/gi, " ");
+        str = str.replace(/\n /, "\n");
+        return str.split(' ').length;
+    }
 
-    // function validasi() {
-    //     if (document.countWords(forms['createLapor']['isi'].value) < 20) {
-    //         alert('Isi Laporan Minimal Memiliki 20 Kata');
-    //         document.forms['createLapor']['isi'].focus();
-    //         return false;
-    //     }
-    // }
+    function validasi() {
+        if (document.countWords(forms['createLapor']['isi'].value) < 20) {
+            alert('Isi Laporan Minimal Memiliki 20 Kata');
+            document.forms['createLapor']['isi'].focus();
+            return false;
+        }
+    }
 </script>
 
 </html>

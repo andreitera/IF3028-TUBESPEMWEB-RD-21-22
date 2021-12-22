@@ -7,7 +7,6 @@
     </header>
     <p>Buat Laporan/Komentar</p>
     <hr>
-    {{-- <form action="/" method="post" enctype="multipart/form-data" onSubmit="validasi()" name="createLapor"> --}}
     <form action="/" method="post" enctype="multipart/form-data" name="createLapor">
         @csrf
         <div class="input-nama">

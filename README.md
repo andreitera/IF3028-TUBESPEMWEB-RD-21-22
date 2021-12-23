@@ -99,7 +99,21 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+Instalasi framework, Framework yang digunakan adalah codeigniter 3:
+1. Mendownload source codeigniter 3 pada situs https://codeigniter.com/download
+2. Setelah di download kemudian di ekstrak ke folder htdocs : C:\xampp\htdocs
+3. Setelah di ekstrak kemudian file codeigniter 3 tadi siap untuk di konfigurasi dan dibangun
+4. Dalam memasang  basis data, maka kita perlu pergi ke localhost/phpmyadmin. Dan kemudian dapat membuat database SQL baru. Disini kami memberi nama “lapor_itera_db”
+5. Setelah basis data SQL dibuat, selanjutnya yaitu menghubungkannya dengan framework codeigniter 3 tadi. Dengan cara melakukan konfigurasi database berupa username, password dan tempat database pada folder application/config/database.php dimana pada file ini telah disediakan field untuk memasukkan atribut dari database tersebut.
+6. Dalam memodifikasi dan membangun framework codeigniter ini dapat dilakukan dengan membuat file di halaman di folder application/view/ . Dan kita dapat mengatur controller agar halaman pada folder view tersebut dapat diakses.
+
+Melakukan validasi pada client-side:
+Validasi client side dilakukan dengan menggunakan javascript. Validasi yang dilakukan adalah dengan melakukan pembatasan jumlah kata pada saat melakukan input laporan yaitu minimal 20 kata. Dan jika field tersebut tidak diisi maka laporan tidak dapat di submit
+
+Melakukan AJAX:
+Penggunaan AJAX pada web yang kami buat digunakan untuk melakukan konfirmasi saat akan melakukan penghapusan pada komentar/laporan.
+
+
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

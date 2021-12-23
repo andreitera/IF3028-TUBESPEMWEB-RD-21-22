@@ -1,0 +1,118 @@
+*{
+	font-family: sans-serif;
+	color: #444444;
+}
+body{
+	background: url('../assets/itera.jpg');
+}
+h1{
+	font-weight: 400;
+}
+.container{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 150px;
+	padding: 20px;
+	background-color: white;
+	margin-right: 150px;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+.container:hover{
+	box-shadow: 2px 2px 4px #000000;
+}
+.content{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+.header{
+	text-align: center;
+}
+.judul-lampiran{
+	width: 30px;
+word-wrap: break-word;
+}
+
+.boxlapor{
+	height: 300px;
+	width: 100%;
+	word-wrap: break-word;
+}
+.boxaspek{
+	padding: 5px;
+}
+.buttonsubmit{
+	padding: 10px;
+	background-color: white;
+	float: right;
+	border: 1px solid grey;
+}
+.buttonsubmit:hover{
+	box-shadow: 2px 2px 4px #000000;
+}
+.isi{
+	text-align: justify;
+}
+.isi-lapor{
+	word-break: break-all;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.isi-lapor-detail{
+	word-break: break-all;
+}
+.boxcari{
+	padding: 17px;
+	width: 80%;
+}
+.boxcari:hover{
+	box-shadow: 2px 2px 4px #000000;
+}
+.btncari:hover{
+	box-shadow: 2px 2px 4px #000000;
+}
+.btncari{
+	padding: 17px;
+	width: 12%;
+	float: right;
+	background-color: white;
+}
+.ikon-cari{
+	width: 15px;
+	height: 15px;
+}
+.buat-lapor{
+	text-decoration: none;
+	text-align: center;
+}
+.opsional{
+	float: right;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-shadow: 2px 2px 4px #000000;
+}
+.edit{
+	position: absolute;
+	right: 530px;
+}
+.hapus{
+	float: right;
+}
+.halaman{
+	font-weight: 100;
+	text-align: center;
+}
+.titik{
+	font-weight: bold;
+	text-align: center;
+}
+.footer{
+	text-align: center;
+}

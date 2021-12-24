@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+.atas{
+    background: -webkit-linear-gradient(-148deg, #ae0b1a, #d20d48);
+    background-image:url(file_gambar/home-cover.jpg);
+    height: 300px;
+}
+
+header{
+    /* background-color:orange; */
+    height: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+header .judul{
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* font-family: inherit; */
+}
+header .judul h2{
+    margin-top: 22px;
+    margin-bottom: 11px;
+    font-size: 33px;
+}
+header .judul p{
+    font-size: 24px;
+}
+
+nav{
+    padding-left: 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    /* font-family: fantasy; */
+    color: white;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    width: 100%;
+}
+
+nav ul li {
+    float:left;
+    /* display:inline-block; */
+    padding: 10px;
+}
+
+nav ul li a{
+    color: white;
+}
+
+
+.body{
+    /* display: flex; */
+    height: 460px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* width: auto; */
+}
+
+.body h1{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: crimson;
+    text-align: center;
+}
+
+.body table tr td{
+    padding-inline-end: 20px;
+}
+
+
+button{
+    padding: 12px 20px 12px 40px;
+    background-image: url(file_gambar/outline_delete_white_24dp.png);
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+    background-color: crimson;
+    border: 2px solid #DC143C;
+    border-radius: 5px;
+    color: white;
+    float: right;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

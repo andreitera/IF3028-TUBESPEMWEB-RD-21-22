@@ -99,7 +99,19 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+Project simpel lapor ini menggunakan frameork laravel sebagai backend dan menggunakan mysql sebagai database
+
+HTML dan CSS digunakan untuk membuat tampilan website. Lalu Javascript digunakan untuk melakukan validasi pada saat user mengisi isi laporan. Karena isi laporan yang diterima minimal 20 kata.
+Kemudian Laravel 8 yang digunakan berfungsi untuk melakuka CRUD pada database.
+
+Untuk menjalankan project ini, pertama harus membuat database dengan nama lapor.
+Lalu menjalankan perintah `php artisan migrate` untuk melakukan migration table lapors.
+Kemudian jalankan perintah `php artisan serve`
+
+Anggota :
+Muhammad Wirasena Ichsan Putra 119140127
+Muhammad Veldyen 119140147
+Daffa Praramadhana 119140172
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

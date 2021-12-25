@@ -49,7 +49,7 @@
         </div>
         <div class="btn">
             <a class="btn-back" href="/">Kembali</a>
-            <button class="btn-lapor" type="submit" onclick="validateForm()">Buat LAPOR!</button>
+            <button class="btn-lapor" type="button" onclick="validateForm()">Buat LAPOR!</button>
         </div>
         <div class="clearfix"></div>
         <div class="hr-create">

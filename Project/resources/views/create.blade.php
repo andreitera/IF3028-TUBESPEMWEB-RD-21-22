@@ -31,7 +31,10 @@
             <div id="file-container">
                 <input type="file" name="fileUpload" id="fileUpload">
             </div>
-            <input type="submit" value="Buat LAPOR!" id="lapor-btn">
+            <div class="button-container">
+                <input type="submit" value="Buat LAPOR!" id="lapor-btn">
+            </div>
+            
         </form>
     </div>
     

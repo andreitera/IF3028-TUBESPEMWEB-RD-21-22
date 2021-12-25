@@ -6,19 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <title>Home</title>
 </head>
 <body>
+    <h1>SIMPLE LAPOR!</h1>
     {{-- @dd($items[1]); --}}
+    <div class="search-bar">
+        <form>
+            <input class="search" size="100" type="text" placeholder="Cari Laporan/Komentar" required>
+            <input class="button" type="button" value="Search">
+        </form>
+    </div>
     <ol>
         @foreach ($items as $item)
             <h3>{{$item["judul"]}}</h3>
             <p>{{$item["isiLaporan"]}}</p>
-            <a href="{{asset('storage/'.$item['file'])}}" download> {{class_basename($item['file'])}} </a>
-            <span><p>Waktu: {{$item["created_at"]}}</p></span>
-            <button class="delete-btn" data-id="{{$item["id"]}}">delete</button>
-            <a href="/edit/{{$item["id"]}}">Ubah Laporan</a>
-            <a href="/{{$item["id"]}}">Lihat Selengkapnya></a>
+            <div class="jam">
+                <a href="{{asset('storage/'.$item['file'])}}" download> {{class_basename($item['file'])}} </a>
+                <span>Waktu: {{$item["created_at"]}}</span>
+            </div>
+            <div class="tombol">
+                <button class="delete-btn" data-id="{{$item["id"]}}">Delete</button>
+                <div class="a-container">
+                    <a href="/edit/{{$item["id"]}}">Ubah Laporan</a>
+                    <a href="/{{$item["id"]}}">Lihat Selengkapnya></a>
+                </div>
+                
+            </div>
+            
         @endforeach
     </ol>
 

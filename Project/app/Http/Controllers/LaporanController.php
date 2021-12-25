@@ -25,8 +25,8 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        $items = Laporan::simplePaginate(3);
-
+        $items = Laporan::orderBy('created_at', 'desc')->simplePaginate(4);
+        
         return view('index', [
             "items" => $items
         ]);

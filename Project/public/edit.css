@@ -42,7 +42,7 @@ html {
 }
 
 .form-container {
-    height: 100%;
+    height: auto;
     width: 68.8%;
     display: flex;
     align-items:stretch;

@@ -1,0 +1,7 @@
+Cara install tubes :
+    1. Download file pada repository tugas ini.
+    2. Install composer dan laravel
+    3. Aktifkan xampp
+    4. Buka gitbash pada folder repository dan tulis "code . " untuk otomatis membuka file laravel tugas ini.
+    5. masuk ke folder lapor dengan command "cd lapor"
+    6. jalankan server laravel dengan "php artisan serve"

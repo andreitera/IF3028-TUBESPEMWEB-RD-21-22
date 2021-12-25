@@ -17,13 +17,18 @@
             <br>
             <p>Buat Laporan/Komentar</p>
             <hr>
-            <form method="post" action="/home">
-                <textarea name="textarea" placeholder="Laporan/Komentar"></textarea>
+            <form method="post" action="{{ url('home') }} " enctype="multipart/form-data">
+                @csrf
+                <textarea name="isi" placeholder="Laporan/Komentar"></textarea>
                 <br><br>
                 
-                    <select name="pilih" id="pilih_jenis"></select>
+                    <select name="aspek" id="pilih_jenis">
+                        <option value="mahasiswa">Mahasiswa</option>
+                        <option value="mahasiswa">Pembangunan</option>
+                    </select>
+
                 <br>
-                    <input type="file" placeholder="Choose File">
+                    <input type="file" name="lampiran" id="laporan" placeholder="Choose File">
             
                 <br><br><br>
                     <div class="detail">

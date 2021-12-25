@@ -20,7 +20,7 @@
 		</form>
 		<br>
 		<center>
-			<a href="">Buat Laporan/Komentar 
+			<a href="{{ url('home/create')}}">Buat Laporan/Komentar 
 			<div style="margin-top: -18px; margin-left: 195px;">
 				<a>
 

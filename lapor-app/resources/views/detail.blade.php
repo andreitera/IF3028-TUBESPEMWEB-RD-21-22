@@ -18,7 +18,8 @@
 			<p>
 			{{ $model -> isi}}
 			</p>
-			<p>Lampiran: {{ $model -> lampiran }}  </p>
+			<p>Lampiran:   </p>
+			<img src="{{ asset('storage/'.$model->lampiran) }}" alt="">
 			<div>
 				<a href="">
 				<img src="/img/edit-file.png" width="25px" height="25px" style="margin-bottom: -43px; margin-left: 410px;"> 

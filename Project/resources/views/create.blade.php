@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@extends('main')
+
+
+@section('head')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Hello World</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href={{ asset('css/create.css') }}>
+    <title>Hello World</title>  
+@endsection
+
+@section('body')
     <div class="form-container">
         <h1>SIMPLE LAPOR!</h1>
+
+        <h2 id="error" style=""></h2>
         <form id="create-form">
             @csrf
             <div id="judul-container">
@@ -38,20 +42,19 @@
         </form>
     </div>
     
-
-
+    
+    
     <script>
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
+    
         $('#lapor-btn').on('click', (e)=>{
             const createForm = document.getElementById('create-form');
             const data = new FormData(createForm);
             e.preventDefault();
-            console.log(data.get('isiLaporan'));
             $.ajax({
                 type: "POST",
                 url: "{{ route('laporan.request.store')}}",
@@ -60,10 +63,18 @@
                 contentType: false,
                 processData: false,
                 success: function (response) {
-                    console.log(response);
+                    console.log(response)
+                    if (response.success) {
+                        window.location.replace('/')
+                    }
+                    else if (response.error){
+                        const error = document.getElementById('error');
+                        error.style.display = 'block'
+                        console.log(response.error)
+                        error.innerHTML  =  response.msg
+                    }
                 }
             });
         });
     </script>
-</body>
-</html>
+@endsection

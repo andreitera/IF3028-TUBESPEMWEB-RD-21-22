@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use Error;
+use Exception;
+use Facade\FlareClient\View;
 use Illuminate\Http\Client\ResponseSequence;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class LaporanController extends Controller
 {
+    
+    public function showAboutView() 
+    {
+        return view('about', []);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +25,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        $items = Laporan::all();
+        $items = Laporan::simplePaginate(3);
 
         return view('index', [
             "items" => $items
@@ -41,42 +50,45 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        // return response($request);
-        $isValid = $request->validate([
+        try {
+            $isValid = $request->validate([
                 'judul' => 'required',
                 'isiLaporan' => 'required',
                 'kategoriLaporan' => 'required',
                 'fileUpload' => 'required|mimes:jpeg,bmp,png,docs,docsx,pdf'
             ]);
         
-        if($isValid) {
-            $path = $request->file('fileUpload')->store('files');
+            if($isValid) {
+                $path = $request->file('fileUpload')->store('files');
 
 
-            $res = $request->all();
-            $input = [
-                'judul' => $res['judul'],
-                'isiLaporan' => $res['isiLaporan'],
-                'kategoriLaporan' => $res['kategoriLaporan'],
-                'file' => $path
-            ];
-
-            try {
-                $saved = Laporan::create($input);
-            } catch (\Illuminate\Database\QueryException $exception) {
-                $errorInfo = $exception->errorInfo;
-                return response($errorInfo);
+                $res = $request->all();
+                $input = [
+                    'judul' => $res['judul'],
+                    'isiLaporan' => $res['isiLaporan'],
+                    'kategoriLaporan' => $res['kategoriLaporan'],
+                    'file' => $path
+                ];
             }
-            
-
+        } catch (Exception $e) {
+            error_log($e->getMessage());
             return response()->json([
-                'success' => 'data saved!',
-                'data' => $saved
+                'error' => 'Cannot saved data',
+                'msg' => $e->getMessage()
             ]);
         }
+        
+        try {
+            $saved = Laporan::create($input);
+        } catch (\Illuminate\Database\QueryException $exception) {
+            $errorInfo = $exception->errorInfo;
+            return response($errorInfo);
+        }
+            
 
         return response()->json([
-            'error' => 'Cannot saved data'
+            'success' => 'data saved!',
+            'data' => $saved
         ]);
     }
 
@@ -122,32 +134,49 @@ class LaporanController extends Controller
     public function showEditView($id) {
         $laporan = Laporan::find($id);
 
-        return View('edit', [
+        return view('edit', [
             "item" => $laporan
         ]);
     }
 
     public function updateLaporan(Request $request) {
         // return response($request->all());
-        $data = $request->validate([
-            'id' => 'required',
-            'judul' => 'required',
-            'isiLaporan' => 'required',
-            'kategoriLaporan' => 'required',
-            'fileUpload' => 'required|mimes:jpeg,bmp,png,docs,docsx,pdf'
-        ]);
 
-
-        $laporan = Laporan::find($data['id']);
-        $laporan->judul = $data['judul'];
-        $laporan->isiLaporan = $data['isiLaporan'];
-        $laporan->kategoriLaporan = $data['isiLaporan'];
+        try {
+            $data = $request->validate([
+                'id' => 'required',
+                'judul' => 'required',
+                'isiLaporan' => 'required',
+                'kategoriLaporan' => 'required',
+                'fileUpload' => 'required|mimes:jpeg,bmp,png,docs,docsx,pdf'
+            ]);
+    
+    
+            $laporan = Laporan::find($data['id']);
+            $laporan->judul = $data['judul'];
+            $laporan->isiLaporan = $data['isiLaporan'];
+            $laporan->kategoriLaporan = $data['kategoriLaporan'];
+            
+            $path = $request->file('fileUpload')->store('files');
+            Storage::delete($laporan->file);
+            $laporan->file = $path;
+        } catch (Exception $e) {
+            return response()->json([
+                'error' => 'Cannot update data',
+                'msg' => $e->getMessage()
+            ]);
+        }
         
-        $path = $request->file('fileUpload')->store('files');
-        Storage::delete($laporan->file);
-        $laporan->file = $path;
+        try {
+            $laporan->save();
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            return response()->json([
+                'error' => 'Cannot update data',
+                'msg' => $e->getMessage()
+            ]);
+        }
         
-        $laporan->save();
 
         return response()->json([
             'success' => 'data updated!',

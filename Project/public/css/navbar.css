@@ -1,0 +1,18 @@
+.logo{
+    background-color: #DDDDDD;
+}
+.nav-btn {
+    background-color: brown;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.4em;
+}
+
+.nav-btn a {
+    background-color: #DDDDDD;
+    text-decoration: none;
+    color: black;
+    padding: 0.2em;
+    border-radius: 2px;
+    margin: 0.2em;
+}

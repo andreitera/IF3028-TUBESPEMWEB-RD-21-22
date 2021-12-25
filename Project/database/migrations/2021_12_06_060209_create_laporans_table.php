@@ -15,10 +15,10 @@ class CreateLaporansTable extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('judul')->nullable(false)->default("");
-            $table->string('isiLaporan')->nullable(false)->default("");
-            $table->string('kategoriLaporan')->nullable(false)->default("");
-            $table->string('file')->nullable(true);
+            $table->text('judul')->nullable(false)->default("");
+            $table->longText('isiLaporan')->nullable(false)->default("");
+            $table->text('kategoriLaporan')->nullable(false)->default("");
+            $table->text('file')->nullable(true);
             $table->timestamps();
         });
     }

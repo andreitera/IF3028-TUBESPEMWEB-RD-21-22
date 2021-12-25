@@ -103,7 +103,9 @@ Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/
 
 ### Penjelasan Teknis
 Nama : Muhammad Nadhif Athalla – Arvenda Budi Anggara – Agusto Hawlai R
+
 NIM : 119140209 – 119140089 – 119140119
+
 Kelas : Pemrograman Web RD
 
 Cara Instalasi Aplikasi

@@ -115,6 +115,11 @@ Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/
    - Hidupkan database/XAMPP, dan lakukan import database 'lapor.sql'. Jangan lupa letakkan di database dengan nama lapor
    - Masukkan link https://localhost/aplikasi_lapor
 
+## **TAMPILAN HOMEPAGE**
+![](tampilan/homepage.png)
+
+## **TAMPILAN HALAMAN LAPOR**
+![](tampilan/report.png)
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

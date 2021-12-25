@@ -21,12 +21,13 @@ html {
     border-bottom: 2px solid grey;
 
 }
-#error {
+.error {
     display: none;
     background-color: #FFC0CB;
     border: solid #FF00CB 3px ;
     border-radius: 0.2em;
     padding : 2px;
+    width: 60%;
 }
 .no-outline:focus {
     outline: none;

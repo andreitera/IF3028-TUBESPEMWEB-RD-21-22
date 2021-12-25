@@ -18,12 +18,15 @@
             @csrf
             <input type="hidden" name="id" value="{{$item['id']}}">
             <div id="judul-container">
+                <p id="judul-error" class="error" style=""></p>
                 <input class="no-outline no-border" type="text" id="judul" placeholder="Ketik judul laporan anda *" name="judul" value="{{$item['judul']}}">
             </div>
             <div id="isi-laporan-container">
+                <p id="isi-error" class="error" style=""></p>
                 <textarea id="isiLaporan" cols="100" rows="10" placeholder="Ketik isi dari laporan *" name="isiLaporan">{{$item['isiLaporan']}}</textarea>
             </div>
             <div id="kategori-laporan-container">
+                <p id="kategori-error" class="error" style=""></p>
                 <select name="kategoriLaporan" id="kategori-laporan">
                     <option value="">Pilih kategori laporan anda</option>
                     <option @if($item["kategoriLaporan"] == "Agama") selected @endif value="Agama">Agama</option>
@@ -32,6 +35,7 @@
                 </select>
             </div>
             <div id="file-container">
+                <p id="file-error" class="error" style=""></p>
                 <input type="file" name="fileUpload" id="fileUpload">
             </div>
             <div class="button-container">
@@ -53,7 +57,43 @@
             const createForm = document.getElementById('edit-form');
             const data = new FormData(createForm);
             e.preventDefault();
-            console.log(data.get('kategoriLaporan'));
+            
+            let isValid = true;
+            console.log(data.get('fileUpload').name )
+            if (!data.get('judul')) {
+                const error = document.getElementById('judul-error');
+                error.style.display = 'block'
+                error.innerHTML  =  'Judul kosong'
+                isValid =false;
+            }
+            if (!data.get('isiLaporan')) {
+                const error = document.getElementById('isi-error');
+                error.style.display = 'block'
+                error.innerHTML  =  'Isi kosong'
+                isValid =false;
+            }
+            else if (data.get('isiLaporan').length < 20) {
+                const error = document.getElementById('isi-error');
+                error.style.display = 'block'
+                error.innerHTML  =  'Isi harus memiliki setidaknya 20 karakter'
+                isValid =false;
+            }
+            
+            if (!data.get('kategoriLaporan') ) {
+                const error = document.getElementById('kategori-error');
+                error.style.display = 'block'
+                error.innerHTML  =  'Anda belum memilih kategori laporan'
+                isValid =false;
+            }
+            if (!data.get('fileUpload').name) {
+                const error = document.getElementById('file-error');
+                error.style.display = 'block'
+                error.innerHTML  =  'Anda belum menambahkan file'
+                isValid =false;
+            }
+
+            if (!isValid) return;
+
             $.ajax({
                 type: "POST",
                 url: "{{ route('laporan.request.update')}}",

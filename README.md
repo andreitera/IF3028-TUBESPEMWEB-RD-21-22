@@ -9,6 +9,9 @@ di program studi teknik informatika ITERA.
 **Luangkan waktu untuk membaca spesifikasi ini sampai selesai.** :kissing_heart:
 
 ### Anggota Tim :cyclone:
+- Muhammad Ariefuddin Satria Dharma 119140149
+- Della Salsabila 119140071
+
 Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa (maksimal 3 orang mahasiswa!).
 
 ### Petunjuk Pengerjaan :umbrella:

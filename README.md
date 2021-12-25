@@ -10,6 +10,9 @@ di program studi teknik informatika ITERA.
 
 ### Anggota Tim :cyclone:
 Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa (maksimal 3 orang mahasiswa!).
+Nama Anggota :
+- Muhammad Farhan 119140108
+- Clarisa Tri Handayani 119140143
 
 ### Petunjuk Pengerjaan :umbrella:
 1. Fork pada repository ini dengan akun github anda.
@@ -99,7 +102,24 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+   - Download framework Codeigniter 3
+   - Melakukan Coding
+
+## **Spesifikasi LAPOR!**
+   - framework          : Codeigniter 3
+   - Database           : mysql
+   - Bahasa Pemrograman : PHP, Javascript
+
+## **CARA INSTALASI**
+   - Download berkas dalam format zip/rar lalu ekstrak dan letakkan di folder C:\xampp\htdocs (Bisa juga dengan melakukan git clone)
+   - Hidupkan database/XAMPP, dan lakukan import database 'lapor.sql'. Jangan lupa letakkan di database dengan nama lapor
+   - Masukkan link https://localhost/aplikasi_lapor
+
+## **TAMPILAN HOMEPAGE**
+![](tampilan/homepage.png)
+
+## **TAMPILAN HALAMAN LAPOR**
+![](tampilan/report.png)
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

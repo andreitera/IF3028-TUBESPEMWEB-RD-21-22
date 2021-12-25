@@ -1,0 +1,25 @@
+body {
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f3f3f3;
+}
+
+fieldset,
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header {
+	background-image: url('https://image.freepik.com/free-vector/abstract-banner-design-shades-red_1048-12133.jpg');
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	min-height: 70px;
+}
+
+.button-1 {
+	float: right;
+}

@@ -4,7 +4,7 @@
 <head>
     <title>SIMPLE LAPOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -18,23 +18,26 @@
 
         <div class="content">
             <div class="detail-content">
-                Lorem Ipsum Sit Dolor amet
+                {!! nl2br(e($post->isilaporan)) !!}
+
+                @if($post->lampiran)
                 <br>
                 <br>
                 <br>
                 <a href="#">
                     <div class="col text-left">Unduh Lampiran</div>
                 </a>
-
+                @endif
             </div>
 
             <div class="row content-footer">
                 <div class="col text-left">
-                    <span>Waktu: 23-12-2021</span>
-                    <span>Aspek: Dosen</span>
+                    <span>Waktu: {{ $post->created_at }}</span>
+                    <span>Aspek: {{ $post->aspek }}</span>
                 </div>
                 <div class="col text-right">
-                    <form action="" method="POST">
+                    <form action="{{ route('destroy', $post->id) }}" method="POST">
+                        @csrf
                         <button type="submit" style="padding: 0; border: none; background: none;">
                             <span>Hapus Laporan/Komentar <i class="fa fa-times"></i></span>
                         </button>

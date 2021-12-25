@@ -100,9 +100,9 @@ Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/
 
 ### Penjelasan Teknis
 Anggota Kelompok :
-Sherin Mediana Putri 119140050
-Sophia Nouriska 119140027
-Viranti 119140024
+1. Sherin Mediana Putri 119140050
+2. Sophia Nouriska 119140027
+3. Viranti 119140024
 
 Petunjuk Instalasi Framework Laravel
 

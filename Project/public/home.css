@@ -3,7 +3,7 @@ h1 {
     font-family:'Courier New', Courier, monospace;
 }
 
-body {
+.container {
     margin: 75px;
     justify-content: center;
     border: solid 2px black;
@@ -49,13 +49,28 @@ h3 {
     border-bottom: 2px solid #970b1e;
     width: 50%;
 }
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-.search-bar form {
+.search-bar div {
+    display: flex;
+    align-items: center;
+    
+}
+.search-bar div a {
+    text-decoration: none;
+    color: black;
+}
+/* .search-bar form {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
-}
+} */
 
 .search {
     background: whitesmoke;
@@ -69,4 +84,25 @@ h3 {
     background-color: #970b1e;
     color: #ffffff;
     border-radius: 3px;
+}
+
+.pagination {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.page-item {
+    background-color:#970b1e;
+    /* border: solid 3px; */
+    border-radius: 3px;
+    color: #ffffff;
+    padding: .5em;
+    
+}
+
+.page-item a {
+    text-decoration: none;
+    color: #ffffff;
 }

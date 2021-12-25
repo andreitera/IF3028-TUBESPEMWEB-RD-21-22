@@ -3,9 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
     <script src="https://kit.fontawesome.com/d3b9ba139c.js" crossorigin="anonymous"></script>
-    <link href="../../public/css/styleutama.css" rel="stylesheet">
+    <link href="../../public/css/styleHome.css" rel="stylesheet">
 	<title>Halaman Home</title>
 </head>
 <body>
@@ -14,9 +13,8 @@
             <nav>
                 <div class="logo"><img src="../../public/css/file_gambar/Logo_ITERA.png" alt="logo itera" height="85px"></div>
                 <ul>
-                    <li><a href="#"><b>TENTANG LAPOR</b></a></li>
-                    <li><a href="#"><b>STATISTIK</b></a></li>  
-                    <li><a href="#"><b>LAPORAN</a></b></li>
+                    <li><a href="<?php echo base_url(); ?>Welcome/index/"><b>HOME</b></a></li>
+                    <li><a href="<?php echo base_url(); ?>Welcome/add/"><b>BUAT LAPORAN</b></a></li>  
                 </ul>
             </nav>
 
@@ -24,9 +22,7 @@
                 <div class="judul">
                     <h2>Layanan Aspirasi dan Pengaduan Online Mahasiswa Teknik Informatika ITERA</h2><br>
                     <p>Sampaikan laporan Anda Langsung Kepada Prodi Teknik Informatika</p><br>
-                    <hr>
-                </div>
-                
+                </div>    
             </header>
         </div>
         
@@ -39,27 +35,24 @@
             </div>
             
             <div class="buat">
-                <table>
-                    <tr>
-                        <td><p></p></td>
-                        <td><a href='<?php echo base_url(); ?>Welcome/add/'><p>Buat Laporan/Komentar &nbsp; <i class="fas fa-plus-square"></i></p></a></td>
-                    </tr>
-                </table>
+                <a href='<?php echo base_url(); ?>Welcome/add/'><p><b>Buat Laporan / Komentar</b> &nbsp; <i class="fas fa-plus-square"></i></p></a>
             </div>
 
             <div class="laporan">
-                <p>Laporan/Komentar Terakhir</p>
-                <hr>
+                <p><b>Laporan / Komentar Terakhir</b></p>
+                <br><hr><br>
 
                 <?php foreach ($posts as $post) : ?>
-					<p> <?php echo $post->laporan; ?> </p>
-					<p> <?php echo $post->aspek; ?> </p>
-					<p> <?php echo $post->file; ?> </p>
+                    <p><b> <?php echo $post->judul; ?> </b></p><br>
+					<p> <?php echo $post->laporan; ?> </p><br>
+					<p> Kategori : <?php echo $post->aspek; ?> </p><br>
+					<p> Lampiran : <?php echo $post->file; ?> </p><br>
+                    <button class="lengkap"><a href='<?php echo base_url('Welcome/view_lapor/'. $post->id ); ?>'>Lihat Selengkapnya</a></button>
+                    <p class="detail"> Waktu : <?php $unix = mysql_to_unix($post->waktu); echo unix_to_human($unix); ?> </p>
                     
-                    <p> <?php $unix = mysql_to_unix($post->waktu); echo unix_to_human($unix); ?> </p>
-                    <button class="lengkap"><a href='<?php echo base_url('Welcome/view_lapor/'. $post->id ); ?>'>Lihat Selengkapnya</a></button> 
-                    <br><br><hr>
+                    <br><br><br><hr><br>
 				<?php endforeach; ?>
+                <br><br>
             </div>                          
         </div>
     </div>

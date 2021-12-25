@@ -106,27 +106,27 @@ Anggota Kelompok :
 
 Petunjuk Instalasi Framework Laravel
 
-instal composer
-instal laravel melalui composer menggunakan terminal dengan perintah "composer global require laravel/installer"
-setelah laravel terinstal, project laravel dapat dibuat dengan perintah "laravel new example-app"
+1. instal composer
+2. instal laravel melalui composer menggunakan terminal dengan perintah "composer global require laravel/installer"
+3. setelah laravel terinstal, project laravel dapat dibuat dengan perintah "laravel new example-app"
 
 Untuk mengkoneksikan database pada laravel koneksi database dikonfigurasi pada file ".env" dengan menyesuaikan nama database yang dibuat, nama host, password serta jenis database yang digunakan untuk pembuatan table pada databasenya sendiri dapat menggunakan artisan migration. Database yang digunakan adalah SQL.
 
-cara menjalankan
+Cara Menjalankan Program
 
-git clone "https://github.com/sophianrs/IF3028-TUBESPEMWEB-RD-21-22"
-buat database dengan nama "lapor"
-ketik pada terminal"composer update"
-ketik pada terminal "git checkout main"
-ketik pada terminal "php artisan key:generate"
-ketik pada terminal "php artisan serve" untuk menjalankan server laravel
-buka browser dengan url http://127.0.0.1:8000
+1. Git clone "https://github.com/sophianrs/IF3028-TUBESPEMWEB-RD-21-22"
+2. Buat database dengan nama "lapor"
+3. Ketik pada terminal"composer update"
+4. Ketik pada terminal "git checkout main"
+5. Ketik pada terminal "php artisan key:generate"
+6. Ketik pada terminal "php artisan serve" untuk menjalankan server laravel
+7. Buka browser dengan url http://127.0.0.1:8000
 
 Validasi dengan Javascript
 
-1. memastikan tidak ada field yang kosong
-2. memastikan isi laporan lebih dari 20 kata
-jika terdapat field kosong atau laporan kurang dari 20 kata maka akan menampilkan sebuah alert berisi pesan
+1. Memastikan tidak ada field yang kosong
+2. Memastikan isi laporan lebih dari 20 kata
+Jika terdapat field kosong atau laporan kurang dari 20 kata maka akan menampilkan sebuah alert berisi pesan
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

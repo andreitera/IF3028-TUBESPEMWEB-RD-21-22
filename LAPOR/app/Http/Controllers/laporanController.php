@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class laporanController extends Controller
@@ -14,6 +15,13 @@ class laporanController extends Controller
     public function index()
     {
         //
+        if(request('keyword')){
+            $posts = Laporan::where('isilaporan', 'Like', '%'. request('keyword') . '%')->get();
+        } else{
+            $posts = Laporan::orderBy('id', 'DESC')->get();
+        }
+
+        return view("index", compact('posts'));
     }
 
     /**
@@ -24,6 +32,7 @@ class laporanController extends Controller
     public function create()
     {
         //
+        return view("lapor");
     }
 
     /**
@@ -35,6 +44,24 @@ class laporanController extends Controller
     public function store(Request $request)
     {
         //
+        try {
+            $validated = request()->validate([
+                'laporan'   => 'required',
+                'aspek'  => 'required',
+                'lampiran'     => 'mimes:doc,docx,xls,xlsx,ppt,pptx,pdf,jpeg,jpg,png|max:2048',
+            ]);
+
+
+            Laporan::create([
+                'isilaporan' => $request->laporan,
+                'aspek' => $request->aspek,
+                'lampiran' => $request->file('lampiran')->move('files', $request->file('lampiran')->hashName())
+            ]);
+        } catch (Exception $e) {
+            return redirect()->route('index')->with('status', 'Gagal Lapor!');
+        }
+
+        return redirect()->route('index')->with('status', 'Berhasil Lapor!');
     }
 
     /**
@@ -46,6 +73,8 @@ class laporanController extends Controller
     public function show($id)
     {
         //
+        $post = Laporan::where('id', $id)->firstOrFail();
+        return view("detail", compact("post"));
     }
 
     /**
@@ -80,5 +109,13 @@ class laporanController extends Controller
     public function destroy($id)
     {
         //
+        $post = Laporan::where('id', $id)->firstOrFail();
+        if(\File::exists(public_path($post->lampiran))){
+            \File::delete(public_path($post->lampiran));
+        }
+
+        $post->delete();
+
+        return redirect()->route('index')->with('status', 'Berhasil Menghapus Lapor!');
     }
 }

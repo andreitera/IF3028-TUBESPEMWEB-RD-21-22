@@ -18,6 +18,8 @@
 
 </body>
 
+<script src="{{asset('assets')}}/js/layout.js"></script>
+
 <script>
     function countWords(str) {
         str = str.replace(/(^\s*)|(\s*$)/gi, "");

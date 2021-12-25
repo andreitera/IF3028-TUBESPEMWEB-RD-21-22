@@ -7,7 +7,7 @@
     </header>
     <p>Buat Laporan/Komentar</p>
     <hr>
-    <form action="/" method="post" enctype="multipart/form-data" name="createLapor">
+    <form action="/" method="post" id="form" name="form" enctype="multipart/form-data" name="createLapor">
         @csrf
         <div class="input-nama">
             <input type="text" id="nama" name="nama" placeholder="Masukan Nama Pelapor.." class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama')}}">
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <textarea id="isi" name="isi" rows="3" required class="form-control @error('isi') is-invalid @enderror" value="{{ old('isi')}}"></textarea>
+            <textarea id="isi" name="isi" rows="3" class="form-control @error('isi') is-invalid @enderror" value="{{ old('isi')}}"></textarea>
 
             @error('isi')
             <div class="invalid-feedback" >{{$message}}</div>
@@ -49,14 +49,14 @@
         </div>
         <div class="btn">
             <a class="btn-back" href="/">Kembali</a>
-            <button class="btn-lapor" type=" submit">Buat LAPOR!</button>
+            <button class="btn-lapor" type="submit" onclick="validateForm()">Buat LAPOR!</button>
         </div>
         <div class="clearfix"></div>
         <div class="hr-create">
             <hr>
         </div>
     </form>
-
+<script src="{{asset('assets')}}/js/layout.js"></script>
 </div>
 
 @endSection

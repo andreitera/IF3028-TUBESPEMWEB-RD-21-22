@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
 use App\Models\Laporan;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,10 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        //
+        $tambah_laporan = new Laporan();
+        return view('createLapor',compact(
+            'tambah_laporan'
+        ));
     }
 
     /**
@@ -38,7 +42,15 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dt = new DateTime('NOW');
+        $tambah_laporan = new Laporan();
+        $tambah_laporan->isi = $request->isi;
+        $tambah_laporan->aspek = $request->aspek;
+        $tambah_laporan->lampiran = $request->file('lampiran')->store('document');
+        $tambah_laporan->waktu = $dt->format('Y-m-d H:i:s');
+        $tambah_laporan->save();
+
+        return redirect('home');
     }
 
     /**

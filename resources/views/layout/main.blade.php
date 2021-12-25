@@ -10,7 +10,7 @@
 <footer>
     <div class="about">
         <a href="/AboutUs">About Us</a> | 
-        <a href="/utama">Home</a>
+        <a href="/Home">Home</a>
     </div>
     <p class="copyright">
         © Copyright 2021 Tubes. Pengweb.

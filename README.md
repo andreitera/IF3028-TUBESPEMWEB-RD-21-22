@@ -117,7 +117,7 @@ Bagian form pembuatan laporan harus terisi semua. khusus pada komentar diharuska
 
 Ketika pengguna membuat laporan, program akan mengirim data yang telah diisi menggunakan metode Post. laravel kemudian mengarahkan program ke laporan.controller dan menjalankan fungsi store. Dalam fungsi ini data-data akan dikirim ke database melalui folder models file laporan.php. file ini lah yang menjembatani program dengan database melalui migration.
 
-untuk penginstalan client harus memiliki composer versi terbaru, dan telah menginstal laravel versi 8. download seluruh folder dari github ini dari branch main, letakkan folder kedalam folder yang telah terinstall laravel. Hidupkan xampp. pada cmd ketikkan "php artisan migrate:fresh. kemudian, pada folder public terdapat file lapor.sql. import file ini kedalam xampp. jalankan laravel dan buka http://127.0.0.1:8000/utama pada browser. aplikasi siap digunakan.
+Untuk penginstalan client harus memiliki composer versi terbaru, dan telah menginstal laravel versi 8. download seluruh folder dari github ini dari branch main, letakkan folder kedalam folder yang telah terinstall laravel. Hidupkan xampp. pada cmd ketikkan "php artisan migrate:fresh. kemudian, pada folder public terdapat file lapor.sql. import file ini kedalam xampp. jalankan laravel dan buka http://localhost:8000/utama pada browser.
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

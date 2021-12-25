@@ -9,7 +9,7 @@ di program studi teknik informatika ITERA.
 **Luangkan waktu untuk membaca spesifikasi ini sampai selesai.** :kissing_heart:
 
 ### Anggota Tim :cyclone:
-Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa (maksimal 3 orang mahasiswa!).
+Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa.
 
 ### Petunjuk Pengerjaan :umbrella:
 1. Fork pada repository ini dengan akun github anda.
@@ -99,7 +99,11 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+- Clone git dengan gitbash / Download repository ini ke PC anda masing masing.
+- Hidupkan database anda, lalu import database yang ada dalam repository ini yang berfilename `lapor.sql`
+- Atur file .env agar sesuai dengan pengaturan local anda
+- jalankan web dengan command "php spark serve"
+- Website sudah berhasil dijalankan
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
@@ -113,4 +117,5 @@ anchor tag.
 
 ### About :honeybee:
 
-Dosen       : Andre Febrianto, S.Kom., M.Eng., Amirul Iqbal, S.Kom., M.Eng., Muhammad Habib Algifari, S.Kom., M.T.I.
+Dosen       : Dicky Prima Satya, M.T., Andre Febrianto, S.Kom., M.Eng., Amirul Iqbal, S.Kom., M.Eng.
+

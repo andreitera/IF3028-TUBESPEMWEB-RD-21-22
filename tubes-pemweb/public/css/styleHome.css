@@ -4,8 +4,6 @@
     font-family:'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-
 .atas{
     background: -webkit-linear-gradient(-148deg, #ae0b1a, #d20d48);
     background-image:url(file_gambar/home-cover.jpg);
@@ -67,37 +65,94 @@ nav ul li a{
     color: white;
 }
 
+.logo {
+    padding-top: 15px;
+}
 
 .body{
     /* display: flex; */
     height: 460px;
-    margin-left: 50px;
-    margin-right: 50px;
     /* width: auto; */
 }
 
-.body h1{
-    padding-top: 20px;
-    padding-bottom: 50px;
-    color: crimson;
-    text-align: center;
+.search input{
+    width: 500px;
+    box-sizing: border-box;
+    border: 2px solid #DC143C;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 18px 12px 18px;
 }
 
-.body table tr td{
-    padding-inline-end: 20px;
-}
-
-
-button{
+.search button{
     padding: 12px 20px 12px 40px;
-    background-image: url(file_gambar/outline_delete_white_24dp.png);
+    background-image: url(file_gambar/outline_search_white_24dp.png);
     background-repeat: no-repeat;
     background-position: 10px 8px;
     background-color: crimson;
     border: 2px solid #DC143C;
     border-radius: 5px;
     color: white;
+    cursor: pointer;
+}
+
+
+.search{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.buat{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.laporan{
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.laporan hr{
+    background-color: crimson;
+}
+
+.waktu table tr td a{
+    color: crimson;
+}
+
+.lampiran{
+    float: left;
+}
+
+.waktu{
     float: right;
+    /* display: flex; */
+    /* padding-right: 50px; */
+}
+
+.waktu table tr td{
+    /* padding: 0px 10px 0px 10px; */
+    padding-inline-end: 10px;
+}
+
+.detail{
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.lengkap{
+    padding: 5px 10px 5px 10px;
+    float: right;
+    background-color: crimson;
+    border: 2px solid #DC143C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lengkap a {
+    color: white;
 }
 
 a{

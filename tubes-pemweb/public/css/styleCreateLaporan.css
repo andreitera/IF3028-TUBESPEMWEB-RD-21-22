@@ -65,80 +65,61 @@ nav ul li a{
     color: white;
 }
 
+.logo{
+    padding-top: 15px;
+}
+
+hr {
+    background-color: crimson;
+}
 
 .body{
     /* display: flex; */
     height: 460px;
+    margin-left: 50px;
+    margin-right: 50px;
     /* width: auto; */
 }
 
-
-
-.search input{
-    width: 500px;
-    box-sizing: border-box;
-    border: 2px solid #DC143C;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
+.body h1{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    color: crimson;
+    text-align: center;
 }
 
-.search button{
-    padding: 12px 20px 12px 40px;
-    background-image: url(file_gambar/outline_search_white_24dp.png);
-    background-repeat: no-repeat;
-    background-position: 10px 8px;
+.submitLapor{
+    float: right;
+    padding: 12px;
     background-color: crimson;
     border: 2px solid #DC143C;
     border-radius: 5px;
     color: white;
 }
 
-
-.search{
-    margin-top: 50px;
-    text-align: center;
-}
-
-.buat{
-    margin-top: 20px;
-    text-align: center;
-    margin-left: 550px;
-    /* background-image: url(file_gambar/add_box_black_24dp.png);
-    background-repeat: no-repeat;
-    background-position: 765px; */
-}
-
-.laporan{
-    margin-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.laporan hr{
-    background-color: crimson;
-}
-
-.waktu table tr td a{
-    color: crimson;
-}
-
-.lampiran{
-    float: left;
-}
-.waktu{
-    float: right;
-    /* display: flex; */
-    /* padding-right: 50px; */
-}
-
-.waktu table tr td{
-    /* padding: 0px 10px 0px 10px; */
-    padding-inline-end: 10px;
-}
-
-
 a{
     text-decoration: none;
     color: black;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.lampiranFile {
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+button{
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 50px;
+    background-color: crimson;
+    border: 2px solid #DC143C;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    cursor: pointer;
 }

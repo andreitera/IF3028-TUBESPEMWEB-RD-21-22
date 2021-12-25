@@ -4,8 +4,6 @@
     font-family:'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-
 .atas{
     background: -webkit-linear-gradient(-148deg, #ae0b1a, #d20d48);
     background-image:url(file_gambar/home-cover.jpg);
@@ -67,7 +65,6 @@ nav ul li a{
     color: white;
 }
 
-
 .body{
     /* display: flex; */
     height: 460px;
@@ -83,20 +80,37 @@ nav ul li a{
     text-align: center;
 }
 
-.aspekLapor{
-    width: 400px;
+.body table tr td{
+    padding-inline-end: 20px;
 }
 
-.submitLapor{
-    float: right;
-    padding: 12px;
+.logo{
+    padding-top: 15px;
+}
+
+button{
+    padding: 10px 15px 10px 15px;
     background-color: crimson;
     border: 2px solid #DC143C;
     border-radius: 5px;
     color: white;
+    float: right;
+    cursor: pointer;
+}
+
+button.updateLapor{
+    margin-right: 10px;
+}
+
+button.deleteLapor{
+    margin-left: 10px;
 }
 
 a{
     text-decoration: none;
     color: black;
+}
+
+hr {
+    background-color: crimson;
 }

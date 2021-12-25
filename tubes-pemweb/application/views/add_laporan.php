@@ -2,51 +2,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
     <script src="https://kit.fontawesome.com/d3b9ba139c.js" crossorigin="anonymous"></script>
+    <link href="../../public/css/styleCreateLaporan.css" rel="stylesheet">
     <title>Tambah Laporan</title>
 </head>
 <body>
     <div class="container">
         <div class="atas">
             <nav>
-                <div class="logo"><img src="file_gambar/Logo_ITERA.png" alt="logo itera" height="85px"></div>
+                <div class="logo"><img src="../../public/css/file_gambar/Logo_ITERA.png" alt="logo itera" height="85px"></div>
                 <ul>
-                    <li><a href="#"><b>TENTANG LAPOR</b></a></li>
-                    <li><a href="#"><b>STATISTIK</b></a></li>  
-                    <li><a href="#"><b>LAPORAN</a></b></li>
+                    <li><a href="<?php echo base_url(); ?>Welcome/index/"><b>HOME</b></a></li>
                 </ul>
             </nav>
 
             <header>
-                
                 <div class="judul">
                     <h2>Layanan Aspirasi dan Pengaduan Online Mahasiswa Teknik Informatika ITERA</h2><br>
                     <p>Sampaikan laporan Anda Langsung Kepada Prodi Teknik Informatika</p><br>
-                    <hr>
                 </div>
-                
             </header>
         </div>
         
 
-        <div class="body">  
+        <div class="body">
+            <br>  
             <h1>Sampaikan Laporan Anda</h1>
-            <p>Buat Laporan/Komentar</p>
-            <hr>
-            <form action='<?php echo base_url(); ?>Welcome/create_process/' method='post'>
-                <textarea name="laporan" id="" cols="176" rows="20" placeholder="Laporan/Komentar"></textarea>
-                <br><br>
+            <hr><br>
+            <form action='<?php echo base_url(); ?>Welcome/create_process/' method='post' onSubmit="validasi()">
+                <label for="judul"><p>Judul Laporan</p></label><br>
+                <textarea name="judul" id="judul" cols="150" placeholder="Ketik Judul Laporan Anda"></textarea>
+                <br><br><label for="laporan"><p>Isi Laporan</p></label><br>
+                <textarea name="laporan" id="laporan" cols="150" rows="20" placeholder="Ketik Isi Laporan Anda"></textarea>
+                <br><br><label for="aspek"><p>Aspek Laporan</p></label><br>
                 <select class="aspekLapor" name="aspek" id="aspek">
+                    <option value="" disabled selected hidden>Pilih Aspek Laporan Anda</option>
                     <option value="Akademik">Akademik</option>
                     <option value="Non Akademik">Non Akademik</option>
                     <option value="Keuangan">Keuangan</option>
                     <option value="Organisasi">Organisasi</option>
                 </select>
-                <br><br>
+                <br><br><label for="waktu"><p>Tanggal Laporan</p></label><br>
                 <input type="date" name="waktu" id="waktu">
-                <br><br>
-                <input type="file" name="file" id="file">
+                <br><br><label for="file"><p>Lampiran</p></label><br>
+                <input class="lampiranFile" type="file" name="file" id="file" value="Tambah Lampiran">
                 <br><br>
                 <button class="submitLapor" type="submit" name="submit" value="Buat Lapor!">Buat Lapor!</button>
                 <br><br>    
@@ -55,26 +54,19 @@
         </div>
     </div>
 </body>
-<!-- <body>
-    <div id="header">
-        <h1>SIMPLE LAPOR!</h1>
-    </div>
-    <div id="form">
-        <form action="" method="POST" enctype="multipart/form-data">
-            <label for="judul">Buat Laporan/Komentar</label><br>
-            <input type="text" id="judul" name="judul"><br><br>
-            <label for="isi">Laporan/Komentar</label><br>
-            <input type="textarea" placeholder="Laporan/Komentar" id="isi" name="isi" rows="4" cols="50"><br><br>
-            <label for="aspek">Pilih Aspek Pelaporan/Komentar</label>
-            <select name="aspek" id="aspek">
-                <option value="pengaduan">Pengaduan</option>
-                <option value="aspirasi">Aspirasi</option>
-                <option value="info">Permintaan Informasi</option>
-            </select><br><br>
-            <input type="file" name="file"><br><br>
-            <input type="submit" name="upload" value="Upload"><br><br>
-            <input type="submit" value="Buat Lapor!">
-        </form>
-    </div>
-</body> -->
+<script type="text/javascript">
+	function validasi() {
+		var judul = document.getElementById("judul").value;
+		var laporan = document.getElementById("laporan").value;
+		var aspek = document.getElementById("aspek").value;
+        var waktu = document.getElementById("waktu").value;
+        var file = document.getElementById("file").value;
+		if (judul != "" && laporan!="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+            return false;
+		}
+	}
+</script>
 </html>

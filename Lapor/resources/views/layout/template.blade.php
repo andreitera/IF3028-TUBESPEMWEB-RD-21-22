@@ -18,7 +18,7 @@
 
 </body>
 
-<script src="{{asset('assets')}}/js/layout.js"></script>
+<script src="{{asset('js/layout.js')}}"></script>
 
 <script>
     function countWords(str) {

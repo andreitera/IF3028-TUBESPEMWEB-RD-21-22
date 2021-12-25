@@ -1,0 +1,96 @@
+div.container{
+    position: relative;
+    height: 200vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 50%;
+    margin: auto;
+    background-color: whitesmoke;
+	padding: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	border-radius: 10px; 
+}
+div.title{
+    text-align: center;
+}
+div.search_bar {
+    text-align: center;
+}
+.buat_lapor a:after{
+    content:"\2795";
+    padding: 2px;
+    font-size: 8pt;
+    font-weight:600;
+    color: white;
+    background-color: black;
+}
+.buat_lapor a{
+    color: black;
+    padding:2px;
+}
+.buat_lapor a:link{
+    text-decoration: none;
+}
+.buat_lapor a:visited{
+    text-decoration: none;
+}
+.search{
+    padding: 20px;
+    border: 1px solid black;
+    width: 60%;
+    margin: 0;
+}
+.search_btn {
+    padding: 20px;
+    width: 15%;
+    border: 1px solid black;
+}
+.search_btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+div.buat_lapor{
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+div.container-laporan{
+    position: relative;
+    top: 100px;
+    margin: auto;
+}
+div.cuplikan-laporan{
+    text-align: justify;
+}
+#gambar-lampiran{
+    width: 300px;
+    height: 400 px;
+}
+div.nama-gambar{
+    position: relative;
+    width: 65%;
+    float:left;
+}
+div.waktu-laporan{
+    position: relative;
+    width: 17%;
+    float: left;
+}
+div.lihat-selengkapnya{
+    position: relative;
+    width: 18%;
+    float:right;
+    text-align: right;
+}
+.lihat-selengkapnya a{
+    color: black;
+    padding:2px;
+}
+.lihat-selengkapnya a:link{
+    text-decoration: none;
+}
+.lihat-selengkapnya a:visited{
+    text-decoration: none;
+}

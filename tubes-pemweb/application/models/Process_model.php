@@ -26,10 +26,11 @@ class Process_model extends CI_Model
 		}
 	}
 
-	public function update_post($id, $laporan, $aspek, $waktu, $file)
+	public function update_post($id, $judul, $laporan, $aspek, $waktu, $file)
 	{
 		$this->load->database();
 		$data = array(
+			'judul' => $judul,
 			'laporan' => $laporan,
 			'aspek' => $aspek,
 			'waktu' => $waktu,
@@ -39,11 +40,12 @@ class Process_model extends CI_Model
 		$this->db->update('daftarlapor', $data);
 	}
 
-	public function insert_post($id, $laporan, $aspek, $waktu, $file)
+	public function insert_post($id, $judul, $laporan, $aspek, $waktu, $file)
 	{
 		$this->load->database();
 		$data = array(
             'id' => $id,
+			'judul' => $judul,
 			'laporan' => $laporan,
 			'aspek' => $aspek,
 			'waktu' => $waktu,
@@ -62,7 +64,7 @@ class Process_model extends CI_Model
 		$this->load->database();
 		$this->db->select('*');
 		$this->db->from('daftarlapor');
-		$this->db->like('laporan',$keyword);
+		$this->db->like('judul',$keyword);
 		return $this->db->get()->result();
 	}
 

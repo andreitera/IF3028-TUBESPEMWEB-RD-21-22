@@ -99,7 +99,7 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-#### Instalasi
+#### - Instalasi
 Sebelum melakukan instalasi pastikan anda telah menginstall dependency yang dibutuhkan :
 - [Composer](https://getcomposer.org/download/)
 - [PHP](https://getcomposer.org/download/)
@@ -132,6 +132,17 @@ Sebelum melakukan instalasi pastikan anda telah menginstall dependency yang dibu
       ```
       php artisan serve
       ```
+#### Validasi Client side
+![client-side](tampilan-hasil/client-side-validation.JPG "client-side-validation")
+- Pada gambar diatas dapat dilihat jika user sudah menekan tombol buat laporan dan ada beberapa field yang belum di isi maka client akan memberikan warning kepada user
+
+#### AJAX Request
+![](tampilan-hasil/AJAX1.JPG "AJAX-1")
+- Pada gambar diatas user sudah memasukan data laporan dan sudah siap menekan tombol buat laporan
+
+
+![](tampilan-hasil/AJAX2.JPG "AJAX-2")
+- Pada gambar diatas data yang baru saja dibuat di masukan di tampilkan pada bagian paling atas
 
 
 ### Knowledge

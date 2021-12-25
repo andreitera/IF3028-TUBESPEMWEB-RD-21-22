@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SIMPLE LAPOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>SIMPLE LAPOR !</h1>
+
+    <div class="container">
+        <div class="row content-footer">
+            <div class="col text-left">Detail Laporan/Komentar</div>
+        </div>
+
+
+        <div class="content">
+            <div class="detail-content">
+                Lorem Ipsum Sit Dolor amet
+                <br>
+                <br>
+                <br>
+                <a href="#">
+                    <div class="col text-left">Unduh Lampiran</div>
+                </a>
+
+            </div>
+
+            <div class="row content-footer">
+                <div class="col text-left">
+                    <span>Waktu: 23-12-2021</span>
+                    <span>Aspek: Dosen</span>
+                </div>
+                <div class="col text-right">
+                    <form action="" method="POST">
+                        <button type="submit" style="padding: 0; border: none; background: none;">
+                            <span>Hapus Laporan/Komentar <i class="fa fa-times"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

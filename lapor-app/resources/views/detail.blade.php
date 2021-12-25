@@ -36,11 +36,15 @@
 			</button>
 			</div>
 			<div class="detail">
-				<button type="submit" style="background-color: rgb(252, 250, 249); margin-top: -2px; margin-right: 10px; border-radius: 10px; ">
-				<a href="" onclick="return confirm('Anda yakin ingin menghapus laporan ini?');" style="color: rgb(7, 7, 7); ">
-				Hapus Laporan/Komentar
-				</a>
-				</button>
+				<form method="post" action="{{ url('home/' .$model->id) }}">
+					@csrf
+					@method('delete')
+					<button onclick="return confirm('Anda yakin ingin menghapus laporan ini?');" type="submit" style="background-color: rgb(252, 250, 249); margin-top: -2px; margin-right: 10px; border-radius: 10px; ">
+					<a style="color: rgb(7, 7, 7); ">
+					Hapus Laporan/Komentar
+					</a>
+					</button>
+				</form>
 			</div>
 			<div style="margin-left: 495px; margin-top:-28px;">
 				<a href="">

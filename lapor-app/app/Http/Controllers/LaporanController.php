@@ -78,7 +78,10 @@ class LaporanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit_laporan = Laporan::find($id);
+        return view('editLapor',compact(
+            'edit_laporan'
+        ));
     }
 
     /**
@@ -90,7 +93,15 @@ class LaporanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dt = new DateTime('NOW');
+        $edit_laporan = Laporan::find($id);
+        $edit_laporan->isi = $request->isi;
+        $edit_laporan->aspek = $request->aspek;
+        $edit_laporan->lampiran = $request->file('lampiran')->store('document');
+        $edit_laporan->waktu = $dt->format('Y-m-d H:i:s');
+        $edit_laporan->save();
+
+        return redirect('home');
     }
 
     /**

@@ -98,6 +98,8 @@ class LaporanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $model = Laporan::find($id);
+        $model->delete();
+        return redirect('home');
     }
 }

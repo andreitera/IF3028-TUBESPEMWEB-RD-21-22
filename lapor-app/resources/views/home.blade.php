@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>HOME</title>
-	<link rel="stylesheet" type="text/css" href="css/style_tampilan.css">
+	<link rel="stylesheet" type="text/css" href="/css/style_tampilan.css">
 
 </head>
 <body>
@@ -39,7 +39,7 @@
 			<p>{{ $lapor-> isi}}</p>
 			<p><img src="img/file.png" width="20px" height="20px"></p>
 			<div style="margin-top: -40px; margin-bottom: 17px; margin-left: 25px; width: 290px;">
-				Lampiran: {{ $lapor-> lampiran }}
+				Lampiran: ...
 			</div>
 			<p style='width: auto; height: auto; margin-top:-35.9px; margin-left: 325px;'>Waktu: {{ $lapor-> waktu }}</p>
 			

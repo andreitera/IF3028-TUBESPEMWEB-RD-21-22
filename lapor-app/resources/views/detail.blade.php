@@ -18,7 +18,8 @@
 			<p>
 			{{ $model -> isi}}
 			</p>
-			<p>Lampiran: {{ $model -> lampiran }}  </p>
+			<p>Lampiran:   </p>
+			<img id="gambar_lampiran" src="{{ asset('storage/'.$model->lampiran) }}" alt="">
 			<div>
 				<a href="">
 				<img src="/img/edit-file.png" width="25px" height="25px" style="margin-bottom: -43px; margin-left: 410px;"> 
@@ -31,7 +32,7 @@
 			
 			<div style="margin-top: -42px; margin-left: 440px;">
 			<button style="background-color: rgba(255, 255, 255, 0.205); border-radius: 10px; ">
-			<a href="" style="color: black;">Edit</a>
+			<a href="{{url('home/'.$model->id.'/edit')}}" style="color: black;">Edit</a>
 			</button>
 			</div>
 			<div class="detail">

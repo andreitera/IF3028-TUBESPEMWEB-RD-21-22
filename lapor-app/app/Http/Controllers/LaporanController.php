@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
 use App\Models\Laporan;
 use Illuminate\Http\Request;
 
@@ -27,9 +28,9 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        $model = new Laporan;
-        return view('createLapor', compact(
-            'model'
+        $tambah_laporan = new Laporan();
+        return view('createLapor',compact(
+            'tambah_laporan'
         ));
     }
 
@@ -41,12 +42,13 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new Laporan;
-        $model -> isi = $request -> isi;
-        $model-> aspek = $request -> aspek;
-        $model -> lampiran = $request -> lampiran;
-        $model -> waktu = $request -> waktu;
-        $model -> save();
+        $dt = new DateTime('NOW');
+        $tambah_laporan = new Laporan();
+        $tambah_laporan->isi = $request->isi;
+        $tambah_laporan->aspek = $request->aspek;
+        $tambah_laporan->lampiran = $request->file('lampiran')->store('document');
+        $tambah_laporan->waktu = $dt->format('Y-m-d H:i:s');
+        $tambah_laporan->save();
 
         return redirect('home');
     }
@@ -73,7 +75,10 @@ class LaporanController extends Controller
      */
     public function edit($id)
     {
-       
+        $edit_laporan = Laporan::find($id);
+        return view('editLapor',compact(
+            'edit_laporan'
+        ));
     }
 
     /**
@@ -85,7 +90,15 @@ class LaporanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dt = new DateTime('NOW');
+        $edit_laporan = Laporan::find($id);
+        $edit_laporan->isi = $request->isi;
+        $edit_laporan->aspek = $request->aspek;
+        $edit_laporan->lampiran = $request->file('lampiran')->store('document');
+        $edit_laporan->waktu = $dt->format('Y-m-d H:i:s');
+        $edit_laporan->save();
+
+        return redirect('home');
     }
 
     /**

@@ -13,9 +13,12 @@ class LaporanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $list_laporan = Laporan::all();
+        $cari = $request->cari;
+        $list_laporan = Laporan::where('isi', 'LIKE', '%'.$cari.'%')
+            ->orWhere('waktu','LIKE','%'.$cari.'%')
+            ->get();
         return view('home', compact(
             'list_laporan'
         ));

@@ -12,7 +12,7 @@
 			<strong>SIMPLE LAPOR!</strong>	
 			<br><br><br>
 		</div>
-		<form action="" method="POST">	
+		<form action="{{ url('home') }}" method="GET">	
 			<center>
 				<input type="text" name="cari">
 				<button type="submit" name="btncari" style="width: 10%; ">Cari</button>

@@ -1,3 +1,6 @@
+
+
+
 ## Simple `LAPOR` :heavy_exclamation_mark:
 Anda mengetahui aplikasi `lapor` yang dibuat oleh pemerintah republik indonesia? jika tidak silahkan kunjungi 
 http://lapor.go.id, maka anda akan mendapatkan laman seperti gambar di bawah
@@ -99,7 +102,16 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+Nama : Muhammad Nadhif Athalla – Arvenda Budi Anggara – Agusto Hawlai R
+
+NIM : 119140209 – 119140089 – 119140119
+
+Kelas : Pemrograman Web RD
+
+Cara Instalasi Aplikasi
+1.	Import database db_lapor.sql kedalam localhost aplikasi database anda
+2.	Mulailah menjalankan di browser dengan url http://localhost/tubes-pemweb/Welcome/index/
+3.	Lalu aplikasi akan berjalan sesuai dengan screenshot hasil
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

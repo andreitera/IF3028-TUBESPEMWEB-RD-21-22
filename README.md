@@ -10,6 +10,9 @@ di program studi teknik informatika ITERA.
 
 ### Anggota Tim :cyclone:
 Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa (maksimal 3 orang mahasiswa!).
+Nama Anggota :
+- Muhammad Farhan 119140108
+- Clarisa Tri Handayani 119140143
 
 ### Petunjuk Pengerjaan :umbrella:
 1. Fork pada repository ini dengan akun github anda.

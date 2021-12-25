@@ -99,7 +99,40 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+#### Instalasi
+Sebelum melakukan instalasi pastikan anda telah menginstall dependency yang dibutuhkan :
+- [Composer](https://getcomposer.org/download/)
+- [PHP](https://getcomposer.org/download/)
+- [XAMPP](https://www.apachefriends.org/index.html)
+**NOTE : Jika sudah menginstall XAMPP, maka tidak perlu menginstall PHP, karena biasanya sudah ada bawaan**
+
+   1. Clone repo ini dengan menyalin command ini 
+      ```
+      git clone https://github.com/ARF-DEV/IF3028-TUBESPEMWEB-RD-21-22.git
+      ```
+   2. Lalu jalankan command ini untuk menginstall semua dependecy yang dibutuhkan project
+      ```
+      composer install
+      ```
+   3. Rename **.env.example** file menjadi **.env** lalu ubah isi dari beberapa variable di dalam file tersebut menjadi berikut:
+      ```
+      DB_CONNECTION=mysql
+      DB_HOST=127.0.0.1
+      DB_PORT=3306
+      DB_DATABASE=laporan
+      DB_USERNAME=root
+      DB_PASSWORD=
+      ```
+   4. Lalu buat DB dengan nama **laporan** pada **phpmyadmin** (karena pada project ini kami menggunakan XAMPP)
+   5. Lalu migrasi model ke database **laporan** yang telah dibuat:
+      ```
+      php artisan migrate
+      ```
+   6. lalu jalankan website dengan perintah :
+      ```
+      php artisan serve
+      ```
+
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

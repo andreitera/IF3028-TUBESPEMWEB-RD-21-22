@@ -51,7 +51,7 @@
                     <p class="detail"> Waktu : <?php $unix = mysql_to_unix($post->waktu); echo unix_to_human($unix); ?> </p>
                     
                     <br><br><br><hr><br>
-				<?php endforeach; ?>
+		<?php endforeach; ?>
                 <br><br>
             </div>                          
         </div>

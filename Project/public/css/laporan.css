@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.laporan-container{
+    margin: 0.3em;
+    padding: 2em;
+    border: solid black 2px;
+    width: 80%;
+    align-self: center;
+}
+
+.judul {
+    width: 60%;
+    border-bottom: solid black 2px;
+}
+
+.delete-btn {
+    padding: 8px;
+    background-color: #970b1e;
+    color: #ffffff;
+    border: 0px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid black 2px;
+}

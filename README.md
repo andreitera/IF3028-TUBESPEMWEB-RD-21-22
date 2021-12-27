@@ -9,6 +9,9 @@ di program studi teknik informatika ITERA.
 **Luangkan waktu untuk membaca spesifikasi ini sampai selesai.** :kissing_heart:
 
 ### Anggota Tim :cyclone:
+- Muhammad Ariefuddin Satria Dharma 119140149
+- Della Salsabila 119140071
+
 Project dikerjakan secara **berkelompok** dengan maksimal jumlah anggota adalah 2-3 orang mahasiswa (maksimal 3 orang mahasiswa!).
 
 ### Petunjuk Pengerjaan :umbrella:
@@ -99,7 +102,51 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+#### - Instalasi
+Sebelum melakukan instalasi pastikan anda telah menginstall dependency yang dibutuhkan :
+- [Composer](https://getcomposer.org/download/)
+- [PHP](https://getcomposer.org/download/)
+- [XAMPP](https://www.apachefriends.org/index.html)
+**NOTE : Jika sudah menginstall XAMPP, maka tidak perlu menginstall PHP, karena biasanya sudah ada bawaan**
+
+   1. Clone repo ini dengan menyalin command ini 
+      ```
+      git clone https://github.com/ARF-DEV/IF3028-TUBESPEMWEB-RD-21-22.git
+      ```
+   2. Lalu jalankan command ini untuk menginstall semua dependecy yang dibutuhkan project
+      ```
+      composer install
+      ```
+   3. Rename **.env.example** file menjadi **.env** lalu ubah isi dari beberapa variable di dalam file tersebut menjadi berikut:
+      ```
+      DB_CONNECTION=mysql
+      DB_HOST=127.0.0.1
+      DB_PORT=3306
+      DB_DATABASE=laporan
+      DB_USERNAME=root
+      DB_PASSWORD=
+      ```
+   4. Lalu buat DB dengan nama **laporan** pada **phpmyadmin** (karena pada project ini kami menggunakan XAMPP)
+   5. Lalu migrasi model ke database **laporan** yang telah dibuat:
+      ```
+      php artisan migrate
+      ```
+   6. lalu jalankan website dengan perintah :
+      ```
+      php artisan serve
+      ```
+#### Validasi Client side
+![client-side](tampilan-hasil/client-side-validation.JPG "client-side-validation")
+- Pada gambar diatas dapat dilihat jika user sudah menekan tombol buat laporan dan ada beberapa field yang belum di isi maka client akan memberikan warning kepada user
+
+#### AJAX Request
+![](tampilan-hasil/AJAX1.JPG "AJAX-1")
+- Pada gambar diatas user sudah memasukan data laporan dan sudah siap menekan tombol buat laporan
+
+
+![](tampilan-hasil/AJAX2.JPG "AJAX-2")
+- Pada gambar diatas data yang baru saja dibuat di masukan di tampilkan pada bagian paling atas
+
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
